@@ -100,16 +100,16 @@ add_action( 'admin_init', 'lsx_testimonials_api_admin_init' );
 /* ======================= Below is the Plugin Class init ========================= */
 
 // Post Type and Custom Fields
-require_once( LSX_TESTIMONIALS_PATH . '/classes/class-testimonials-admin.php' );
+require_once( LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-admin.php' );
 
 // Frontend scripts and styles
-require_once( LSX_TESTIMONIALS_PATH . '/classes/class-testimonials-frontend.php' );
+require_once( LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-frontend.php' );
 
 // Shortcode and Template Tag
-require_once( LSX_TESTIMONIALS_PATH . '/classes/class-testimonials.php' );
+require_once( LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials.php' );
 
 // Widget
-require_once( LSX_TESTIMONIALS_PATH . '/classes/class-testimonials-widget.php' );
+require_once( LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-widget.php' );
 
 // Template Tag and functions
 require_once( LSX_TESTIMONIALS_PATH . '/includes/functions.php' );
