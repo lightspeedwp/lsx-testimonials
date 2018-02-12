@@ -1,0 +1,78 @@
+@mixin customizer-testimonials-link-colour ($color: #418AD0, $hover: #F7AE00) {
+	&,
+	&:active,
+	&:visited {
+		color: $color;
+	}
+
+	&:hover,
+	&:hover:active,
+	&:focus {
+		color: $hover;
+	}
+}
+
+@mixin customizer-testimonials-body-colours($bg: #F6F6F6, $breaker: #DADDDF, $color: #4A4A4A, $link: #418AD0, $hover: #F7AE00, $small: #919191) {
+	.single-testimonial {
+		.entry-tabs {
+			.tab-pane { background-color: #FFF; }
+
+			.nav-tabs {
+				& > li {
+					& > a {
+						background-color: #FFF;
+
+						&:hover { background-color: #FFF; }
+					}
+
+					&.active > a {
+						background-color: $link;
+						color: #FFF;
+
+						&:after { border-color: transparent transparent $bg transparent; }
+					}
+				}
+			}
+		}
+	}
+
+	.content-area {
+		.lsx-testimonials-title > a:not(.btn) {
+			@include customizer-testimonials-link-colour($color, $hover);
+		}
+
+		.lsx-testimonials-meta-wrap { color: $small; }
+
+		.lsx-testimonials-archive-link {
+			&:before,
+			&:after {
+				background-color: $breaker;
+			}
+		}
+
+		#lsx-testimonials-slider {
+			.slick-dots {
+				& > li {
+					& > button { border-color: $color; }
+
+					&.slick-active > button { background-color: $color; }
+				}
+			}
+
+			.slick-arrow {
+				border-color: $color;
+				color: $color;
+
+				&:hover {
+					border-color: $hover;
+					color: $hover;
+				}
+
+				&.slick-disabled {
+					border-color: $breaker;
+					color: $breaker;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,347 @@
+# Copyright (C) 2017 lsx-testimonials
+# This file is distributed under the same license as the lsx-testimonials package.
+msgid ""
+msgstr ""
+"Project-Id-Version: lsx-testimonials\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: LightSpeed <webmaster@lsdev.biz>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: classes/class-testimonials-admin.php:42
+msgctxt "post type general name"
+msgid "Testimonials"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:43
+msgctxt "post type singular name"
+msgid "Testimonial"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:44
+msgctxt "post type general name"
+msgid "Add New"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:45
+msgid "Add New Testimonial"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:46
+msgid "Edit Testimonial"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:47
+msgid "New Testimonial"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:48
+msgid "All Testimonials"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:49
+msgid "View Testimonial"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:50
+msgid "Search Testimonials"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:51
+msgid "No testimonials found"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:52
+msgid "No testimonials found in Trash"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:54
+msgctxt "admin menu"
+msgid "Testimonials"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:88
+msgid "Featured:"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:93
+msgid "Gravatar Email Address:"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:94
+msgid "Enter the email address of this client to use a gravatar image"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:99
+msgid "Company and Job title:"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:100
+msgid "Enter the company and job title of the person giving the testimonial eg. CEO of ABC enterprises"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:105
+msgid "URL:"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:106
+msgid "Link to the client's website - This adds a link to the \"Company and Job title\" field above"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:114
+msgid "Projects:"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:133
+msgid "Services:"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:152
+msgid "Team Member:"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:170
+msgid "Testimonial Details"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:263, classes/class-testimonials-admin.php:264
+msgid "Theme Options"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:268
+msgid "Save Changes"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:289
+msgid "Display"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:301
+msgid "API"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:332
+msgid "Disable Single Posts"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:336
+msgid "Disable Single Posts."
+msgstr ""
+
+#: classes/class-testimonials-admin.php:347
+msgid "Placeholder"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:355
+msgid "Choose Image"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:356
+msgid "Delete"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:366
+msgid "Select featured image"
+msgstr ""
+
+#: classes/class-testimonials-admin.php:376
+msgid "Enter client's name or a title for this testimonial"
+msgstr ""
+
+#: classes/class-testimonials-frontend.php:158, includes/settings/display.php:19
+msgid "Testimonials"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:18
+msgid "LSX Testimonials"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:181
+msgid "Title:"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:185
+msgid "Page Link:"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:187
+msgid "Link the widget to a page"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:190
+msgid "Tagline:"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:192
+msgid "Tagline to display below the widget title"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:195
+msgid "Columns:"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:207
+msgid "Order By:"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:211
+msgid "None"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:212
+msgid "ID"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:213
+msgid "Name"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:214
+msgid "Date"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:215
+msgid "Modified Date"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:216
+msgid "Random"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:217
+msgid "Menu (WP dashboard order)"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:227
+msgid "Order:"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:231
+msgid "Ascending"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:232
+msgid "Descending"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:242
+msgid "Maximum amount:"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:244
+msgid "Leave empty to display all"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:247
+msgid "Specify Testimonials by ID:"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:249
+msgid "Comma separated list, overrides limit and order settings"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:252
+msgid "Display:"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:256
+msgid "Excerpt"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:257
+msgid "Full Content"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:267
+msgid "Image size:"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:271
+msgid "Button \"view all\" text:"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:273
+msgid "Leave empty to not display the button"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:277
+msgid "Display Images"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:281
+msgid "Responsive Images"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:285
+msgid "Carousel"
+msgstr ""
+
+#: classes/class-testimonials-widget.php:289
+msgid "Featured posts"
+msgstr ""
+
+#: classes/class-testimonials.php:181
+msgid "Read More"
+msgstr ""
+
+#: classes/class-testimonials.php:199, classes/class-testimonials.php:210, templates/content-archive-testimonials.php:25, templates/content-single-testimonials.php:152
+msgid "Role & Company"
+msgstr ""
+
+#: classes/class-testimonials.php:223
+msgid "Invalid number of columns set. LSX Testimonials supports 1 to 4 columns."
+msgstr ""
+
+#: templates/content-single-testimonials.php:23, includes/settings/display.php:24
+msgid "Projects"
+msgstr ""
+
+#: templates/content-single-testimonials.php:63, includes/settings/display.php:29
+msgid "Services"
+msgstr ""
+
+#: templates/content-single-testimonials.php:103, includes/settings/display.php:14
+msgid "Team"
+msgstr ""
+
+#: includes/settings/api.php:11
+msgid "Settings"
+msgstr ""
+
+#: includes/settings/api.php:12
+msgid "License Keys"
+msgstr ""
+
+#: includes/settings/api.php:17
+msgid "Please enter your user details (email address, API key, username, etc) below as required for the extensions that you have installed."
+msgstr ""
+
+#: includes/settings/display.php:4
+msgid "Placeholders"
+msgstr ""
+
+#: includes/settings/display.php:9
+msgid "Currencies"
+msgstr ""
+
+#: includes/settings/display.php:34
+msgid "Blog Customizer (posts widget)"
+msgstr ""
+
+#: includes/settings/display.php:39
+msgid "Sharing"
+msgstr ""
+
+#: includes/settings/display.php:44
+msgid "Videos"
+msgstr ""
+
+#: includes/settings/display.php:49
+msgid "Search"
+msgstr ""

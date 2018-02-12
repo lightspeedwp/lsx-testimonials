@@ -1,0 +1,1 @@
+{"version":3,"sources":["lsx-testimonials-fonts.scss"],"names":[],"mappings":"AAAA,4CAEa,oCAAkC,EAAK","file":"../lsx-testimonials-fonts.css","sourcesContent":[".single-testimonial {\n\t.entry-content {\n\t\t&:before { font-family: [font-family-headings]; }\n\t}\n}\n"]}
