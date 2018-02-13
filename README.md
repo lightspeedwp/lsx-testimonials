@@ -45,40 +45,53 @@ Insert the shortcode `[testimonials]` into any page to display all testimonials.
  
  For Example `[testimonials columns=4]`
 
-- orderby
- - choose how the testimonails should be ordered
+### Orderby
+ Choose how the testimonails should be ordered
+ 
  - options: none, ID, name, date, rand (or any of the orderby options accepted by WP_Query - http://codex.wordpress.org/Class_Reference/WP_Query)
  - default: name
- - eg: `[testimonials orderby=rand]`
+ 
+ For Example `[testimonials orderby=rand]`
 
-- order
- - whether to display testimonials in ascending or descending order (based on the orderby parameter)
+### Order
+ Whether to display testimonials in Ascending or Descending order (Based on the Orderby Parameter)
+ 
  - options: ASC, DESC
  - default: ASC
- - eg: `[testimonials order='DESC']`
+ 
+ For Example `[testimonials order='DESC']`
 
-- limit
- - set the maximum number of testimonials to be returned
- - eg: `[testimonials limit=4]`
+### Limit
 
-- include
- - specify which testimonials to include by entering a comma seperated list of IDs. (This overrides the order and limit parameters; testimonials will display in the order in which the IDs are entered)
- - eg: `[testimonials include='7, 38, 19']`
+ Set the Maximum number of testimonials to be returned
+ 
+ For Example `[testimonials limit=4]`
 
-- size
- - set the featured image or Gravatar size to display on each testimonial. Accepts numbers only, exclude the 'px'.
+### Include
+ Specify which testimonials to include by entering a comma seperated list of IDs. (This overrides the order and limit parameters; testimonials will display in the order in which the IDs are entered)
+ 
+ For Example `[testimonials include='7, 38, 19']`
+
+### Size
+ Set the featured image or Gravatar size to display on each testimonial. Accepts numbers only, exclude the 'px'.
+ 
  - default: 150
- - eg: `[testimonials size=200]`
+ 
+ For Example `[testimonials size=200]`
 
-- responsive
- - choose whether the images should resize according to the size of the viewport (enabled by default)
+### Responsive
+ Choose whether the images should resize according to the size of the viewport (enabled by default)
+ 
  - default: true
- - eg: `[testimonials responsive=false]`
+ 
+ For Example `[testimonials responsive=false]`
 
-- show_image
- - choose whether the images should display (enabled by default)
+### Show_image
+ Choose whether the images should display (enabled by default)
+ 
  - default: true
- - eg: `[testimonials show_image=false]`
+ 
+ For Example `[testimonials show_image=false]`
 
 ## Function Call:
 
