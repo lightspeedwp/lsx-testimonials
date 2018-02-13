@@ -37,11 +37,13 @@ Insert the shortcode `[testimonials]` into any page to display all testimonials.
 
 ### Optional shortcode parameters:
 
-- columns
- - set the number of columns to display
+### Columns
+ Set the number of columns to Display
+ 
  - options: 1, 2, 3, 4
  - default: 1
- - eg: `[testimonials columns=4]`
+ 
+ For Example `[testimonials columns=4]`
 
 - orderby
  - choose how the testimonails should be ordered
