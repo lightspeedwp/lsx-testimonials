@@ -326,7 +326,8 @@ class LSX_Testimonials_Admin {
 	/**
 	 * Outputs the Display flags checkbox
 	 */
-	public function disable_single_post_field() { ?>
+	public function disable_single_post_field() {
+    ?>
 		<tr class="form-field">
 			<th scope="row">
 				<label for="testimonials_disable_single"><?php esc_html_e( 'Disable Single Posts', 'lsx-testimonials' ); ?></label>
@@ -336,12 +337,14 @@ class LSX_Testimonials_Admin {
 				<small><?php esc_html_e( 'Disable Single Posts.', 'lsx-testimonials' ); ?></small>
 			</td>
 		</tr>
-	<?php }
+	<?php
+}
 
 	/**
 	 * Outputs the flag position field
 	 */
-	public function placeholder_field() { ?>
+	public function placeholder_field() {
+    ?>
 		<tr class="form-field">
 			<th scope="row">
 				<label for="banner"> <?php esc_html_e( 'Placeholder', 'lsx-testimonials' ); ?></label>
@@ -356,7 +359,8 @@ class LSX_Testimonials_Admin {
 				<a {{#unless testimonials_placeholder}}style="display:none;"{{/unless}} class="button-secondary lsx-thumbnail-image-delete" data-slug="testimonials_placeholder"><?php esc_html_e( 'Delete', 'lsx-testimonials' ); ?></a>
 			</td>
 		</tr>
-	<?php }
+	<?php
+}
 
 	/**
 	 * Change the "Insert into Post" button text when media modal is used for feature images
