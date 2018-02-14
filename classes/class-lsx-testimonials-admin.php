@@ -25,16 +25,16 @@ class LSX_Testimonials_Admin
             }
         }
 
-		add_action( 'init', array( $this, 'post_type_setup' ) );
-		add_filter( 'cmb_meta_boxes', array( $this, 'field_setup' ) );
-		add_action( 'cmb_save_custom', array( $this, 'post_relations' ), 3, 20 );
-		add_action( 'admin_enqueue_scripts', array( $this, 'assets' ) );
+        add_action('init', array($this, 'post_type_setup'));
+        add_filter('cmb_meta_boxes', array($this, 'field_setup'));
+        add_action('cmb_save_custom', array($this, 'post_relations'), 3, 20);
+        add_action('admin_enqueue_scripts', array($this, 'assets'));
 
-		add_action( 'init', array( $this, 'create_settings_page' ), 100 );
-		add_filter( 'lsx_framework_settings_tabs', array( $this, 'register_tabs' ), 100, 1 );
+        add_action('init', array( $this, 'create_settings_page'), 100);
+        add_filter('lsx_framework_settings_tabs', array($this, 'register_tabs'), 100, 1);
 
-		add_filter( 'type_url_form_media', array( $this, 'change_attachment_field_button' ), 20, 1 );
-		add_filter( 'enter_title_here', array( $this, 'change_title_text' ) );
+        add_filter('type_url_form_media', array( $this, 'change_attachment_field_button'), 20, 1);
+        add_filter('enter_title_here', array($this, 'change_title_text'));
 	}
 
 	public function post_type_setup() {
