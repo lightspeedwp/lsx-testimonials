@@ -11,31 +11,32 @@ $lsx_testimonials_scporder = new LSX_Testimonials_SCPO_Engine();
  * @link
  * @copyright 2018 LightSpeed
  */
-class LSX_Testimonials_SCPO_Engine {
+class LSX_Testimonials_SCPO_Engine
+{
+    function __construct()
+    { if (!get_option('lsx_testimonials_scporder_install'))
+        $this->lsx_testimonials_scporder_install();
 
-	function __construct() {
-		if (!get_option('lsx_testimonials_scporder_install'))
-			$this->lsx_testimonials_scporder_install();
+        add_action('admin_init', array($this, 'refresh'));
+        add_action('admin_init', array($this, 'load_script_css'));
 
-		add_action('admin_init', array($this, 'refresh'));
-		add_action('admin_init', array($this, 'load_script_css'));
+        add_action('wp_ajax_update-menu-order', array($this, 'update_menu_order'));
 
-		add_action('wp_ajax_update-menu-order', array($this, 'update_menu_order'));
+        add_action('pre_get_posts', array($this, 'lsx_testimonials_scporder_pre_get_posts'));
 
-		add_action('pre_get_posts', array($this, 'lsx_testimonials_scporder_pre_get_posts'));
+        add_filter('get_previous_post_where', array($this, 'lsx_testimonials_scporder_previous_post_where'));
+        add_filter('get_previous_post_sort', array($this, 'lsx_testimonials_scporder_previous_post_sort'));
+        add_filter('get_next_post_where', array($this, 'lsx_testimonials_scporder_next_post_where'));
+        add_filter('get_next_post_sort', array($this, 'lsx_testimonials_scporder_next_post_sort'));
+    }
 
-		add_filter('get_previous_post_where', array($this, 'lsx_testimonials_scporder_previous_post_where'));
-		add_filter('get_previous_post_sort', array($this, 'lsx_testimonials_scporder_previous_post_sort'));
-		add_filter('get_next_post_where', array($this, 'lsx_testimonials_scporder_next_post_where'));
-		add_filter('get_next_post_sort', array($this, 'lsx_testimonials_scporder_next_post_sort'));
-	}
+    function LSX_Testimonials_Scporder_Install()
+    {
+        update_option('LSX_Testimonials_Scporder_Install', 1);
+    }
 
-	function lsx_testimonials_scporder_install() {
-		update_option('lsx_testimonials_scporder_install', 1);
-	}
-
-	function _check_load_script_css() {
-		$active = false;
+    function _Check_Load_Script_Css() {
+        $active = false;
 		$objects = $this->get_lsx_testimonials_scporder_options_objects();
 
 		if (empty($objects))
@@ -57,7 +58,7 @@ class LSX_Testimonials_SCPO_Engine {
 	}
 
 	function load_script_css() {
-		if ($this->_check_load_script_css()) {
+		if ($this->_Check_Load_Script_Css()) {
 			wp_enqueue_script('scporderjs', LSX_TESTIMONIALS_URL . 'assets/js/scporder.min.js', array('jquery', 'jquery-ui-sortable'), null, true);
 
 			$scporderjs_params = array(

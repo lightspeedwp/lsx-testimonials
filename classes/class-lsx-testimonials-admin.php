@@ -1,16 +1,17 @@
 <?php
 /**
  * LSX Testimonials Admin Class
- *
- * @package   LSX Testimonials
+ * @package   LSX_Testimonials
  * @author    LightSpeed
  * @license   GPL3
  * @link
- * @copyright 2016 LightSpeed
+ * @copyright 2018 LightSpeed
  */
-class LSX_Testimonials_Admin {
 
-	public function __construct() {
+class LSX_Testimonials_Admin
+{
+    public function __construct()
+    {
 		if ( ! class_exists( 'CMB_Meta_Box' ) ) {
 			require_once( LSX_TESTIMONIALS_PATH . '/vendor/Custom-Meta-Boxes/custom-meta-boxes.php' );
 		}
