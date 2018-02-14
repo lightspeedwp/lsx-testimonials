@@ -327,39 +327,39 @@ class LSX_Testimonials_Admin {
 	 * Outputs the Display flags checkbox
 	 */
 	public function disable_single_post_field() {
-    ?>
-		<tr class="form-field">
-			<th scope="row">
-				<label for="testimonials_disable_single"><?php esc_html_e( 'Disable Single Posts', 'lsx-testimonials' ); ?></label>
-			</th>
-			<td>
-				<input type="checkbox" {{#if testimonials_disable_single}} checked="checked" {{/if}} name="testimonials_disable_single" />
-				<small><?php esc_html_e( 'Disable Single Posts.', 'lsx-testimonials' ); ?></small>
-			</td>
-		</tr>
-	<?php
+	    ?>
+            <tr class="form-field">
+                <th scope="row">
+                    <label for="testimonials_disable_single"><?php esc_html_e( 'Disable Single Posts', 'lsx-testimonials' ); ?></label>
+                </th>
+                <td>
+                    <input type="checkbox" {{#if testimonials_disable_single}} checked="checked" {{/if}} name="testimonials_disable_single" />
+                    <small><?php esc_html_e( 'Disable Single Posts.', 'lsx-testimonials' ); ?></small>
+                </td>
+            </tr>
+	    <?php
 }
 
 	/**
 	 * Outputs the flag position field
 	 */
 	public function placeholder_field() {
-    ?>
-		<tr class="form-field">
-			<th scope="row">
-				<label for="banner"> <?php esc_html_e( 'Placeholder', 'lsx-testimonials' ); ?></label>
-			</th>
-			<td>
-				<input class="input_image_id" type="hidden" {{#if testimonials_placeholder_id}} value="{{testimonials_placeholder_id}}" {{/if}} name="testimonials_placeholder_id" />
-				<input class="input_image" type="hidden" {{#if testimonials_placeholder}} value="{{testimonials_placeholder}}" {{/if}} name="testimonials_placeholder" />
-				<div class="thumbnail-preview">
-					{{#if testimonials_placeholder}}<img src="{{testimonials_placeholder}}" width="150" />{{/if}}
-				</div>
-				<a {{#if testimonials_placeholder}}style="display:none;"{{/if}} class="button-secondary lsx-thumbnail-image-add" data-slug="testimonials_placeholder"><?php esc_html_e( 'Choose Image', 'lsx-testimonials' ); ?></a>
-				<a {{#unless testimonials_placeholder}}style="display:none;"{{/unless}} class="button-secondary lsx-thumbnail-image-delete" data-slug="testimonials_placeholder"><?php esc_html_e( 'Delete', 'lsx-testimonials' ); ?></a>
-			</td>
-		</tr>
-	<?php
+	    ?>
+            <tr class="form-field">
+                <th scope="row">
+                    <label for="banner"> <?php esc_html_e( 'Placeholder', 'lsx-testimonials' ); ?></label>
+                </th>
+                <td>
+                    <input class="input_image_id" type="hidden" {{#if testimonials_placeholder_id}} value="{{testimonials_placeholder_id}}" {{/if}} name="testimonials_placeholder_id" />
+                    <input class="input_image" type="hidden" {{#if testimonials_placeholder}} value="{{testimonials_placeholder}}" {{/if}} name="testimonials_placeholder" />
+                    <div class="thumbnail-preview">
+                        {{#if testimonials_placeholder}}<img src="{{testimonials_placeholder}}" width="150" />{{/if}}
+                    </div>
+                    <a {{#if testimonials_placeholder}}style="display:none;"{{/if}} class="button-secondary lsx-thumbnail-image-add" data-slug="testimonials_placeholder"><?php esc_html_e( 'Choose Image', 'lsx-testimonials' ); ?></a>
+                    <a {{#unless testimonials_placeholder}}style="display:none;"{{/unless}} class="button-secondary lsx-thumbnail-image-delete" data-slug="testimonials_placeholder"><?php esc_html_e( 'Delete', 'lsx-testimonials' ); ?></a>
+                </td>
+            </tr>
+	    <?php
 }
 
 	/**
