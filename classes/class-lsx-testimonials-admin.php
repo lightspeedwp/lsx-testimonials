@@ -327,17 +327,17 @@ class LSX_Testimonials_Admin {
 	 * Outputs the Display flags checkbox
 	 */
 	public function disable_single_post_field() {
-	    ?>
-            <tr class="form-field">
-                <th scope="row">
-                    <label for="testimonials_disable_single"><?php esc_html_e( 'Disable Single Posts', 'lsx-testimonials' ); ?></label>
-                </th>
-                <td>
-                    <input type="checkbox" {{#if testimonials_disable_single}} checked="checked" {{/if}} name="testimonials_disable_single" />
-                    <small><?php esc_html_e( 'Disable Single Posts.', 'lsx-testimonials' ); ?></small>
-                </td>
-            </tr>
-	    <?php
+    ?>
+        <tr class="form-field">
+            <th scope="row">
+                <label for="testimonials_disable_single"><?php esc_html_e( 'Disable Single Posts', 'lsx-testimonials' ); ?></label>
+            </th>
+            <td>
+                <input type="checkbox" {{#if testimonials_disable_single}} checked="checked" {{/if}} name="testimonials_disable_single" />
+                <small><?php esc_html_e( 'Disable Single Posts.', 'lsx-testimonials' ); ?></small>
+            </td>
+        </tr>
+    <?php
 }
 
 	/**
