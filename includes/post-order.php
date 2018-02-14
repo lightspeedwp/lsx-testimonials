@@ -37,7 +37,7 @@ class LSX_Testimonials_SCPO_Engine
 
     function _Check_Load_Script_Css() {
         $active = false;
-		$objects = $this->get_lsx_testimonials_scporder_options_objects();
+        $objects = $this->get_lsx_testimonials_scporder_options_objects();
 
 		if (empty($objects))
 			return false;

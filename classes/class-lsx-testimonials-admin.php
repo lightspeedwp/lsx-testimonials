@@ -12,19 +12,18 @@ class LSX_Testimonials_Admin
 {
     public function __construct()
     {
-		if ( ! class_exists( 'CMB_Meta_Box' ) ) {
-			require_once( LSX_TESTIMONIALS_PATH . '/vendor/Custom-Meta-Boxes/custom-meta-boxes.php' );
-		}
+        if (! class_exists('CMB_Meta_Box')) {
+			require_once LSX_TESTIMONIALS_PATH . '/vendor/Custom-Meta-Boxes/custom-meta-boxes.php';
+        }
+        if (function_exists('tour_operator')) {
+            $this->options = get_option('_lsx-to_settings', false);
+        } else {
+            $this->options = get_option('_lsx_settings', false);
 
-		if ( function_exists( 'tour_operator' ) ) {
-			$this->options = get_option( '_lsx-to_settings', false );
-		} else {
-			$this->options = get_option( '_lsx_settings', false );
-
-			if ( false === $this->options ) {
-				$this->options = get_option( '_lsx_lsx-settings', false );
-			}
-		}
+            if (false === $this->options ) {
+                $this->options = get_option('_lsx_lsx-settings', false);
+            }
+        }
 
 		add_action( 'init', array( $this, 'post_type_setup' ) );
 		add_filter( 'cmb_meta_boxes', array( $this, 'field_setup' ) );
