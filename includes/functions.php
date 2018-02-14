@@ -12,14 +12,13 @@
 /**
  * Add our action to init to set up our vars first.
  */
-function lsx_testimonials_load_plugin_textdomain() {
-	load_plugin_textdomain( 'lsx-testimonials', FALSE, basename( LSX_TESTIMONIALS_PATH ) . '/languages');
-}
+function lsx_testimonials_load_plugin_textdomain() { load_plugin_textdomain( 'lsx-testimonials', FALSE, basename( LSX_TESTIMONIALS_PATH ) . '/languages'); }
 add_action( 'init', 'lsx_testimonials_load_plugin_textdomain' );
 
 /**
  * Wraps the output class in a function to be called in templates
  */
+
 function lsx_testimonials( $args ) {
 	$lsx_testimonials = new LSX_Testimonials;
 	echo wp_kses_post( $lsx_testimonials->output( $args ) );
