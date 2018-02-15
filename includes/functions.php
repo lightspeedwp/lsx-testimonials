@@ -13,7 +13,7 @@
  * Add our action to init to set up our vars first.
  */
 function lsx_testimonials_load_plugin_textdomain() {
-    load_plugin_textdomain( 'lsx-testimonials', false, basename( LSX_TESTIMONIALS_PATH ) . '/languages');
+        load_plugin_textdomain( 'lsx-testimonials', false, basename( LSX_TESTIMONIALS_PATH ) . '/languages');
 }
 add_action( 'init', 'lsx_testimonials_load_plugin_textdomain' );
 

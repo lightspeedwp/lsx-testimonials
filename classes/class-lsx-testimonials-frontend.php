@@ -9,8 +9,8 @@
  * @copyright 2018 LightSpeed
  */
 class LSX_Testimonials_Frontend {
-    public function __construct() {
-        if ( function_exists( 'tour_operator' ) ) {
+    public function __construct(){
+        if (function_exists('tour_operator')) {
             $this->options = get_option( '_lsx-to_settings', false );
         } else {
             $this->options = get_option( '_lsx_settings', false );
