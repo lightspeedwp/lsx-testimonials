@@ -165,7 +165,7 @@ class LSX_Testimonials {
 				$link_close = '';
 
 				if ( get_post_meta( $post->ID, 'lsx_testimonial_url', true ) ) {
-					$link_open = '<a href='" . get_post_meta( $post->ID, 'lsx_testimonial_url', true ) . "' target='_blank'>';
+                    $link_open = "<a href='" . get_post_meta( $post->ID, 'lsx_testimonial_url', true ) . "' target='_blank'>";
 					$link_close = '</a>';
 				}
 
