@@ -18,8 +18,10 @@ People want to be sure that they’re making the right purchase from the right b
 We've also made a fantastic [theme](https://www.lsdev.biz/product/lsx-wordpress-theme/) that work well with the LSX Testimonial plugin.
 
 = It's free, and always will be. =
-We’re firm believers in open source - that’s why we’re releasing the LSX Testimonial plugin for free, forever. We offer free support on the [LSX Testimonial support forums](https://wordpress.org/support/plugin/lsx-testimonials). 
+We’re firm believers in open source - that’s why we’re releasing the LSX Testimonial plugin for free, forever. We offer free support on the [LSX Testimonial support forums](https://wordpress.org/support/plugin/lsx-testimonials).
 
+= Support =
+We offer premium support for this plugin. Premium support that can be purchased via [lsdev.biz](https://www.lsdev.biz/).
 
 == Installation ==
 
