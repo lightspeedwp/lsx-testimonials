@@ -30,7 +30,7 @@ class LSX_Testimonials_SCPO_Engine
         add_filter('get_next_post_sort', array($this, 'lsx_testimonials_scporder_next_post_sort'));
     }
 
-    function LSX_Testimonials_Scporder_Install()
+    function lsx_testimonials_scporder_install()
     {
         update_option('LSX_Testimonials_Scporder_Install', 1);
     }
