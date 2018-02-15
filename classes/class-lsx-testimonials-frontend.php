@@ -13,11 +13,11 @@ class LSX_Testimonials_Frontend {
         if ( function_exists( 'tour_operator' ) ) {
             $this->options = get_option( '_lsx-to_settings', false );
         } else {
-			$this->options = get_option( '_lsx_settings', false );
-			if ( false === $this->options ) {
-				$this->options = get_option( '_lsx_lsx-settings', false );
-			}
-		}
+            $this->options = get_option( '_lsx_settings', false );
+            if ( false === $this->options ) {
+            $this->options = get_option( '_lsx_lsx-settings', false );
+            }
+        }
 
         add_action('wp_enqueue_scripts', array( $this, 'enqueue_scripts'), 999);
         add_filter('wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ), 10, 2);
