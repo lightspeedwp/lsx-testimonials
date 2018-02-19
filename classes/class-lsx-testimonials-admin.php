@@ -9,32 +9,32 @@
  */
 
 class LSX_Testimonials_Admin {
-    public function __construct() {
-    if ( ! class_exists( 'CMB_Meta_Box' ) ) {
-            require_once( LSX_TESTIMONIALS_PATH . '/vendor/Custom-Meta-Boxes/custom-meta-boxes.php' );
-        }
+	public function __construct() {
+		if ( ! class_exists( 'CMB_Meta_Box' ) ) {
+			require_once( LSX_TESTIMONIALS_PATH . '/vendor/Custom-Meta-Boxes/custom-meta-boxes.php' );
+		}
 
-        if ( function_exists( 'tour_operator' ) ) {
-            $this->options = get_option( '_lsx-to_settings', false );
-        } else {
-            $this->options = get_option( '_lsx_settings', false );
+		if ( function_exists( 'tour_operator' ) ) {
+			$this->options = get_option( '_lsx-to_settings', false );
+		} else {
+			$this->options = get_option( '_lsx_settings', false );
 
-            if ( false === $this->options ) {
-                $this->options = get_option( '_lsx_lsx-settings', false );
-            }
-        }
+			if ( false === $this->options ) {
+				$this->options = get_option( '_lsx_lsx-settings', false );
+			}
+		}
 
-        add_action( 'init', array( $this, 'post_type_setup' ) );
-        add_filter( 'cmb_meta_boxes', array( $this, 'field_setup' ) );
-        add_action( 'cmb_save_custom', array( $this, 'post_relations' ), 3, 20 );
-        add_action( 'admin_enqueue_scripts', array( $this, 'assets' ) );
+		add_action( 'init', array( $this, 'post_type_setup' ) );
+		add_filter( 'cmb_meta_boxes', array( $this, 'field_setup' ) );
+		add_action( 'cmb_save_custom', array( $this, 'post_relations' ), 3, 20 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'assets' ) );
 
-        add_action( 'init', array( $this, 'create_settings_page' ), 100 );
-        add_filter( 'lsx_framework_settings_tabs', array( $this, 'register_tabs' ), 100, 1 );
+		add_action( 'init', array( $this, 'create_settings_page' ), 100 );
+		add_filter( 'lsx_framework_settings_tabs', array( $this, 'register_tabs' ), 100, 1 );
 
-        add_filter( 'type_url_form_media', array( $this, 'change_attachment_field_button' ), 20, 1 );
-        add_filter( 'enter_title_here', array( $this, 'change_title_text' ) );
-    }
+		add_filter( 'type_url_form_media', array( $this, 'change_attachment_field_button' ), 20, 1 );
+		add_filter( 'enter_title_here', array( $this, 'change_title_text' ) );
+	}
 
 	public function post_type_setup() {
 		$labels = array(
@@ -110,58 +110,58 @@ class LSX_Testimonials_Admin {
 
 		if ( class_exists( 'LSX_Projects' ) ) {
 			$fields[] = array(
-				'name' => esc_html__( 'Projects:', 'lsx-testimonials' ),
-				'id' => 'project_to_testimonial',
-				'type' => 'post_select',
-				'use_ajax' => false,
-				'query' => array(
-					'post_type' => 'project',
-					'nopagin' => true,
+				'name'       => esc_html__( 'Projects:', 'lsx-testimonials' ),
+				'id'         => 'project_to_testimonial',
+				'type'       => 'post_select',
+				'use_ajax'   => false,
+				'query'      => array(
+					'post_type'      => 'project',
+					'nopagin'        => true,
 					'posts_per_page' => '50',
-					'orderby' => 'title',
-					'order' => 'ASC',
+					'orderby'        => 'title',
+					'order'          => 'ASC',
 				),
 				'repeatable' => true,
 				'allow_none' => true,
-				'cols' => 12,
+				'cols'       => 12,
 			);
 		}
 
 		if ( class_exists( 'LSX_Services' ) ) {
 			$fields[] = array(
-				'name' => esc_html__( 'Services:', 'lsx-testimonials' ),
-				'id' => 'service_to_testimonial',
-				'type' => 'post_select',
-				'use_ajax' => false,
-				'query' => array(
-					'post_type' => 'service',
-					'nopagin' => true,
+				'name'       => esc_html__( 'Services:', 'lsx-testimonials' ),
+				'id'         => 'service_to_testimonial',
+				'type'       => 'post_select',
+				'use_ajax'   => false,
+				'query'      => array(
+					'post_type'      => 'service',
+					'nopagin'        => true,
 					'posts_per_page' => '50',
-					'orderby' => 'title',
-					'order' => 'ASC',
+					'orderby'        => 'title',
+					'order'          => 'ASC',
 				),
 				'repeatable' => true,
 				'allow_none' => true,
-				'cols' => 12,
+				'cols'       => 12,
 			);
 		}
 
 		if ( class_exists( 'LSX_Team' ) ) {
 			$fields[] = array(
-				'name' => esc_html__( 'Team Member:', 'lsx-testimonials' ),
-				'id' => 'team_to_testimonial',
-				'type' => 'post_select',
-				'use_ajax' => false,
-				'query' => array(
-					'post_type' => 'team',
-					'nopagin' => true,
+				'name'       => esc_html__( 'Team Member:', 'lsx-testimonials' ),
+				'id'         => 'team_to_testimonial',
+				'type'       => 'post_select',
+				'use_ajax'   => false,
+				'query'      => array(
+					'post_type'      => 'team',
+					'nopagin'        => true,
 					'posts_per_page' => '50',
-					'orderby' => 'title',
-					'order' => 'ASC',
+					'orderby'        => 'title',
+					'order'          => 'ASC',
 				),
 				'repeatable' => true,
 				'allow_none' => true,
-				'cols' => 12,
+				'cols'       => 12,
 			);
 		}
 
@@ -198,7 +198,7 @@ class LSX_Testimonials_Admin {
 	 * Save the reverse post relation.
 	 */
 	public function save_related_post( $connections, $post_id, $field, $value ) {
-		$ids = explode( '_to_', $field['id'] );
+		$ids      = explode( '_to_', $field['id'] );
 		$relation = $ids[1] . '_to_' . $ids[0];
 
 		if ( in_array( $relation, $connections ) ) {
@@ -238,15 +238,15 @@ class LSX_Testimonials_Admin {
 			if ( ! class_exists( '\lsx\ui\uix' ) && ! function_exists( 'tour_operator' ) ) {
 				include_once LSX_TESTIMONIALS_PATH . 'vendor/uix/uix.php';
 				$pages = $this->settings_page_array();
-				$uix = \lsx\ui\uix::get_instance( 'lsx' );
+				$uix   = \lsx\ui\uix::get_instance( 'lsx' );
 				$uix->register_pages( $pages );
 			}
 
 			//@TODO this class exists condition does not work here
 			//if ( function_exists( 'tour_operator' ) ) {
-				add_action( 'lsx_to_framework_display_tab_content', array( $this, 'display_settings' ), 11 );
+			add_action( 'lsx_to_framework_display_tab_content', array( $this, 'display_settings' ), 11 );
 			//} else {
-				add_action( 'lsx_framework_display_tab_content', array( $this, 'display_settings' ), 11 );
+			add_action( 'lsx_framework_display_tab_content', array( $this, 'display_settings' ), 11 );
 			//}
 		}
 	}
@@ -258,7 +258,7 @@ class LSX_Testimonials_Admin {
 		$tabs = apply_filters( 'lsx_framework_settings_tabs', array() );
 
 		return array(
-			'settings'  => array(
+			'settings' => array(
 				'page_title'  => esc_html__( 'Theme Options', 'lsx-testimonials' ),
 				'menu_title'  => esc_html__( 'Theme Options', 'lsx-testimonials' ),
 				'capability'  => 'manage_options',
@@ -283,11 +283,11 @@ class LSX_Testimonials_Admin {
 		if ( ! function_exists( 'tour_operator' ) ) {
 			if ( ! array_key_exists( 'display', $tabs ) ) {
 				$tabs['display'] = array(
-					'page_title'        => '',
-					'page_description'  => '',
-					'menu_title'        => esc_html__( 'Display', 'lsx-testimonials' ),
-					'template'          => LSX_TESTIMONIALS_PATH . 'includes/settings/display.php',
-					'default'           => $default,
+					'page_title'       => '',
+					'page_description' => '',
+					'menu_title'       => esc_html__( 'Display', 'lsx-testimonials' ),
+					'template'         => LSX_TESTIMONIALS_PATH . 'includes/settings/display.php',
+					'default'          => $default,
 				);
 
 				$default = false;
@@ -295,11 +295,11 @@ class LSX_Testimonials_Admin {
 
 			if ( ! array_key_exists( 'api', $tabs ) ) {
 				$tabs['api'] = array(
-					'page_title'        => '',
-					'page_description'  => '',
-					'menu_title'        => esc_html__( 'API', 'lsx-testimonials' ),
-					'template'          => LSX_TESTIMONIALS_PATH . 'includes/settings/api.php',
-					'default'           => $default,
+					'page_title'       => '',
+					'page_description' => '',
+					'menu_title'       => esc_html__( 'API', 'lsx-testimonials' ),
+					'template'         => LSX_TESTIMONIALS_PATH . 'includes/settings/api.php',
+					'default'          => $default,
 				);
 
 				$default = false;
@@ -313,6 +313,7 @@ class LSX_Testimonials_Admin {
 	 * Outputs the display tabs settings
 	 *
 	 * @param $tab string
+	 *
 	 * @return null
 	 */
 	public function display_settings( $tab = 'general' ) {
@@ -326,40 +327,47 @@ class LSX_Testimonials_Admin {
 	 * Outputs the Display flags checkbox
 	 */
 	public function disable_single_post_field() {
-    ?>
+		?>
         <tr class="form-field">
             <th scope="row">
                 <label for="testimonials_disable_single"><?php esc_html_e( 'Disable Single Posts', 'lsx-testimonials' ); ?></label>
             </th>
             <td>
-                <input type="checkbox" {{#if testimonials_disable_single}} checked="checked" {{/if}} name="testimonials_disable_single" />
+                <input type="checkbox" {{#if testimonials_disable_single}} checked="checked" {{/if}}
+                name="testimonials_disable_single" />
                 <small><?php esc_html_e( 'Disable Single Posts.', 'lsx-testimonials' ); ?></small>
             </td>
         </tr>
-    <?php
-}
+		<?php
+	}
 
 	/**
 	 * Outputs the flag position field
 	 */
 	public function placeholder_field() {
-	    ?>
-            <tr class="form-field">
-                <th scope="row">
-                    <label for="banner"> <?php esc_html_e( 'Placeholder', 'lsx-testimonials' ); ?></label>
-                </th>
-                <td>
-                    <input class="input_image_id" type="hidden" {{#if testimonials_placeholder_id}} value="{{testimonials_placeholder_id}}" {{/if}} name="testimonials_placeholder_id" />
-                    <input class="input_image" type="hidden" {{#if testimonials_placeholder}} value="{{testimonials_placeholder}}" {{/if}} name="testimonials_placeholder" />
-                    <div class="thumbnail-preview">
-                        {{#if testimonials_placeholder}}<img src="{{testimonials_placeholder}}" width="150" />{{/if}}
-                    </div>
-                    <a {{#if testimonials_placeholder}}style="display:none;"{{/if}} class="button-secondary lsx-thumbnail-image-add" data-slug="testimonials_placeholder"><?php esc_html_e( 'Choose Image', 'lsx-testimonials' ); ?></a>
-                    <a {{#unless testimonials_placeholder}}style="display:none;"{{/unless}} class="button-secondary lsx-thumbnail-image-delete" data-slug="testimonials_placeholder"><?php esc_html_e( 'Delete', 'lsx-testimonials' ); ?></a>
-                </td>
-            </tr>
-	    <?php
-}
+		?>
+        <tr class="form-field">
+            <th scope="row">
+                <label for="banner"> <?php esc_html_e( 'Placeholder', 'lsx-testimonials' ); ?></label>
+            </th>
+            <td>
+                <input class="input_image_id" type="hidden" {{#if testimonials_placeholder_id}}
+                       value="{{testimonials_placeholder_id}}" {{/if}} name="testimonials_placeholder_id" />
+                <input class="input_image" type="hidden" {{#if testimonials_placeholder}}
+                       value="{{testimonials_placeholder}}" {{/if}} name="testimonials_placeholder" />
+                <div class="thumbnail-preview">
+                    {{#if testimonials_placeholder}}<img src="{{testimonials_placeholder}}" width="150"/>{{/if}}
+                </div>
+                <a {{#if testimonials_placeholder}}style="display:none;" {{/if}} class="button-secondary
+                lsx-thumbnail-image-add"
+                data-slug="testimonials_placeholder"><?php esc_html_e( 'Choose Image', 'lsx-testimonials' ); ?></a>
+                <a {{#unless testimonials_placeholder}}style="display:none;" {{/unless}} class="button-secondary
+                lsx-thumbnail-image-delete"
+                data-slug="testimonials_placeholder"><?php esc_html_e( 'Delete', 'lsx-testimonials' ); ?></a>
+            </td>
+        </tr>
+		<?php
+	}
 
 	/**
 	 * Change the "Insert into Post" button text when media modal is used for feature images
