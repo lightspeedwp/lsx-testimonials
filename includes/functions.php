@@ -13,8 +13,9 @@
  * Add our action to init to set up our vars first.
  */
 function lsx_testimonials_load_plugin_textdomain() {
-        load_plugin_textdomain( 'lsx-testimonials', false, basename( LSX_TESTIMONIALS_PATH ) . '/languages');
+	load_plugin_textdomain( 'lsx-testimonials', false, basename( LSX_TESTIMONIALS_PATH ) . '/languages' );
 }
+
 add_action( 'init', 'lsx_testimonials_load_plugin_textdomain' );
 
 /**
@@ -31,6 +32,8 @@ function lsx_testimonials( $args ) {
  */
 function lsx_testimonials_shortcode( $atts ) {
 	$lsx_testimonials = new LSX_Testimonials;
+
 	return $lsx_testimonials->output( $atts );
 }
+
 add_shortcode( 'lsx_testimonials', 'lsx_testimonials_shortcode' );
