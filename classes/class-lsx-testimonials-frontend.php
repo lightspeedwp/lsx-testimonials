@@ -1,4 +1,5 @@
 <?php
+
 /**
  * LSX Testimonials Frontend Class
  *
@@ -9,59 +10,66 @@
  * @copyright 2018 LightSpeed
  */
 class LSX_Testimonials_Frontend {
-    public function __construct(){
-        if (function_exists('tour_operator')) {
-                $this->options = get_option( '_lsx-to_settings', false );
-        } else {
-                $this->options = get_option( '_lsx_settings', false );
-            if ( false === $this->options ) {
-                $this->options = get_option( '_lsx_lsx-settings', false );
-            }
-        }
-
-        add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts'), 999);
-        add_filter( 'wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ), 10, 2);
-        add_filter( 'template_include', array( $this, 'single_template_include' ), 99);
-        add_filter( 'template_include', array( $this, 'archive_template_include' ), 99);
-
-		if ( ! empty( $this->options['display'] ) && ! empty( $this->options['display']['testimonials_disable_single'] ) ) {
-            add_action('template_redirect', array( $this, 'disable_single' ));
-        }
-
-        if ( is_admin() ) {
-            add_filter('lsx_customizer_colour_selectors_body', array( $this, 'customizer_body_colours_handler' ), 15, 2);
+	public function __construct() {
+		if ( function_exists( 'tour_operator' ) ) {
+			$this->options = get_option( '_lsx-to_settings', false );
+		} else {
+			$this->options = get_option( '_lsx_settings', false );
+			if ( false === $this->options ) {
+				$this->options = get_option( '_lsx_lsx-settings', false );
+			}
 		}
 
-        add_filter('lsx_fonts_css', array( $this, 'customizer_fonts_handler' ), 15);
-        add_filter('lsx_banner_title', array( $this, 'lsx_banner_archive_title' ), 15);
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 999 );
+		add_filter( 'wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ), 10, 2 );
+		add_filter( 'template_include', array( $this, 'single_template_include' ), 99 );
+		add_filter( 'template_include', array( $this, 'archive_template_include' ), 99 );
 
-        add_filter('excerpt_more_p', array( $this, 'change_excerpt_more' ));
-        add_filter('excerpt_length', array( $this, 'change_excerpt_length' ));
-        add_filter('excerpt_strip_tags', array( $this, 'change_excerpt_strip_tags' ));
+		if ( ! empty( $this->options['display'] ) && ! empty( $this->options['display']['testimonials_disable_single'] ) ) {
+			add_action( 'template_redirect', array( $this, 'disable_single' ) );
+		}
+
+		if ( is_admin() ) {
+			add_filter( 'lsx_customizer_colour_selectors_body', array(
+				$this,
+				'customizer_body_colours_handler'
+			), 15, 2 );
+		}
+
+		add_filter( 'lsx_fonts_css', array( $this, 'customizer_fonts_handler' ), 15 );
+		add_filter( 'lsx_banner_title', array( $this, 'lsx_banner_archive_title' ), 15 );
+
+		add_filter( 'excerpt_more_p', array( $this, 'change_excerpt_more' ) );
+		add_filter( 'excerpt_length', array( $this, 'change_excerpt_length' ) );
+		add_filter( 'excerpt_strip_tags', array( $this, 'change_excerpt_strip_tags' ) );
 	}
 
-    public function enqueue_scripts() {
-        $has_slick = wp_script_is( 'slick', 'queue' );
+	public function enqueue_scripts() {
+		$has_slick = wp_script_is( 'slick', 'queue' );
 
-        if ( ! $has_slick ) {
-            wp_enqueue_style( 'slick', LSX_TESTIMONIALS_URL . 'assets/css/vendor/slick.css', array(), LSX_TESTIMONIALS_VER, null );
-            wp_enqueue_script( 'slick', LSX_TESTIMONIALS_URL . 'assets/js/vendor/slick.min.js', array( 'jquery' ), null, LSX_TESTIMONIALS_VER, true );
-        }
+		if ( ! $has_slick ) {
+			wp_enqueue_style( 'slick', LSX_TESTIMONIALS_URL . 'assets/css/vendor/slick.css', array(), LSX_TESTIMONIALS_VER, null );
+			wp_enqueue_script( 'slick', LSX_TESTIMONIALS_URL . 'assets/js/vendor/slick.min.js', array( 'jquery' ), null, LSX_TESTIMONIALS_VER, true );
+		}
 
-        wp_enqueue_script( 'lsx-testimonials', LSX_TESTIMONIALS_URL . 'assets/js/lsx-testimonials.min.js', array( 'jquery', 'slick' ), LSX_TESTIMONIALS_VER, true );
+		wp_enqueue_script( 'lsx-testimonials', LSX_TESTIMONIALS_URL . 'assets/js/lsx-testimonials.min.js', array(
+			'jquery',
+			'slick'
+		), LSX_TESTIMONIALS_VER, true );
 
-        $params = apply_filters( 'lsx_testimonials_js_params', array(
-            'ajax_url' => admin_url( 'admin-ajax.php' ),
-		));
+		$params = apply_filters( 'lsx_testimonials_js_params', array(
+			'ajax_url' => admin_url( 'admin-ajax.php' ),
+		) );
 
 		wp_localize_script( 'lsx-testimonials', 'lsx_testimonials_params', $params );
 
-        wp_enqueue_style( 'lsx-testimonials', LSX_TESTIMONIALS_URL . 'assets/css/lsx-testimonials.css', array(), LSX_TESTIMONIALS_VER );
-        wp_style_add_data( 'lsx-testimonials', 'rtl', 'replace' );
+		wp_enqueue_style( 'lsx-testimonials', LSX_TESTIMONIALS_URL . 'assets/css/lsx-testimonials.css', array(), LSX_TESTIMONIALS_VER );
+		wp_style_add_data( 'lsx-testimonials', 'rtl', 'replace' );
 	}
 
 	public function wp_kses_allowed_html( $allowedtags, $context ) {
 		$allowedtags['div']['data-slick'] = true;
+
 		return $allowedtags;
 	}
 
