@@ -32,7 +32,7 @@ class LSX_Testimonials_Frontend {
 		if ( is_admin() ) {
 			add_filter( 'lsx_customizer_colour_selectors_body', array(
 				$this,
-				'customizer_body_colours_handler'
+				'customizer_body_colours_handler',
 			), 15, 2 );
 		}
 
@@ -54,7 +54,7 @@ class LSX_Testimonials_Frontend {
 
 		wp_enqueue_script( 'lsx-testimonials', LSX_TESTIMONIALS_URL . 'assets/js/lsx-testimonials.min.js', array(
 			'jquery',
-			'slick'
+			'slick',
 		), LSX_TESTIMONIALS_VER, true );
 
 		$params = apply_filters( 'lsx_testimonials_js_params', array(
