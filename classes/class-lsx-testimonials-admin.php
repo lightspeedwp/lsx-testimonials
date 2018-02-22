@@ -10,7 +10,7 @@
 
 class LSX_Testimonials_Admin {
 	public function __construct() {
-		if ( ! class_exists( 'CMB_Meta_Box' ) ) {
+		if( ! class_exists( 'CMB_Meta_Box' ) ) {
 			require_once( LSX_TESTIMONIALS_PATH . '/vendor/Custom-Meta-Boxes/custom-meta-boxes.php' );
 		}
 
@@ -328,9 +328,9 @@ class LSX_Testimonials_Admin {
 	 */
 	public function disable_single_post_field() {
 		?>
-        <tr class="form-field">
-            <th scope="row">
-                <label for="testimonials_disable_single"><?php esc_html_e( 'Disable Single Posts', 'lsx-testimonials' ); ?></label>
+		<tr class="form-field">
+			<th scope="row">
+			<label for="testimonials_disable_single"><?php esc_html_e( 'Disable Single Posts', 'lsx-testimonials' ); ?></label>
             </th>
             <td>
                 <input type="checkbox" {{#if testimonials_disable_single}} checked="checked" {{/if}}
