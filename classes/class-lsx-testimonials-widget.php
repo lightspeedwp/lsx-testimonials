@@ -176,42 +176,43 @@ class LSX_Testimonials_Widget extends WP_Widget {
 		$button_text = esc_attr( $instance['button_text'] );
 		$carousel    = esc_attr( $instance['carousel'] );
 		$featured    = esc_attr( $instance['featured'] ); ?>
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'lsx-testimonials' ); ?></label>
-            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
-                   name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text"
-                   value="<?php echo esc_attr( $title ); ?>"/>
-        </p>
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title_link' ) ); ?>"><?php esc_html_e( 'Page Link:', 'lsx-testimonials' ); ?></label>
-            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_link' ) ); ?>"
-                   name="<?php echo esc_attr( $this->get_field_name( 'title_link' ) ); ?>" type="text"
-                   value="<?php echo esc_attr( $title_link ); ?>"/>
-            <small><?php esc_html_e( 'Link the widget to a page', 'lsx-testimonials' ); ?></small>
-        </p>
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'tagline' ) ); ?>"><?php esc_html_e( 'Tagline:', 'lsx-testimonials' ); ?></label>
-            <textarea class="widefat" rows="8" cols="20"
-                      id="<?php echo esc_attr( $this->get_field_id( 'tagline' ) ); ?>"
-                      name="<?php echo esc_attr( $this->get_field_name( 'tagline' ) ); ?>"><?php echo esc_html( $tagline ); ?></textarea>
-            <small><?php esc_html_e( 'Tagline to display below the widget title', 'lsx-testimonials' ); ?></small>
-        </p>
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'columns' ) ); ?>"><?php esc_html_e( 'Columns:', 'lsx-testimonials' ); ?></label>
-            <select name="<?php echo esc_attr( $this->get_field_name( 'columns' ) ); ?>"
-                    id="<?php echo esc_attr( $this->get_field_id( 'columns' ) ); ?>" class="widefat">
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'lsx-testimonials' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text"
+					alue="<?php echo esc_attr( $title ); ?>"/>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title_link' ) ); ?>"><?php esc_html_e( 'Page Link:', 'lsx-testimonials' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_link' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'title_link' ) ); ?>" type="text"
+					value="<?php echo esc_attr( $title_link ); ?>"/>
+			<small><?php esc_html_e( 'Link the widget to a page', 'lsx-testimonials' ); ?></small>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'tagline' ) ); ?>"><?php esc_html_e( 'Tagline:', 'lsx-testimonials' ); ?></label>
+				<textarea class="widefat" rows="8" cols="20"
+						id="<?php echo esc_attr( $this->get_field_id( 'tagline' ) ); ?>"
+						ame="<?php echo esc_attr( $this->get_field_name( 'tagline' ) ); ?>"><?php echo esc_html( $tagline ); ?></textarea>
+				<small><?php esc_html_e( 'Tagline to display below the widget title', 'lsx-testimonials' ); ?></small>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'columns' ) ); ?>"><?php esc_html_e( 'Columns:', 'lsx-testimonials' ); ?></label>
+			<select name="<?php echo esc_attr( $this->get_field_name( 'columns' ) ); ?>"
+					id="<?php echo esc_attr( $this->get_field_id( 'columns' ) ); ?>" class="widefat">
 				<?php
 				$options = array( '1', '2', '3', '4' );
 
 				foreach ( $options as $option ) {
 					echo '<option value="' . esc_attr( lcfirst( $option ) ) . '" id="' . esc_attr( $option ) . '"', lcfirst( $option ) == $columns ? ' selected="selected"' : '', '>', esc_html( $option ), '</option>';
-				} ?>
-            </select>
-        </p>
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'orderby' ) ); ?>"><?php esc_html_e( 'Order By:', 'lsx-testimonials' ); ?></label>
-            <select name="<?php echo esc_attr( $this->get_field_name( 'orderby' ) ); ?>"
-                    id="<?php echo esc_attr( $this->get_field_id( 'orderby' ) ); ?>" class="widefat">
+				}
+			?>
+			</select>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'orderby' ) ); ?>"><?php esc_html_e( 'Order By:', 'lsx-testimonials' ); ?></label>
+			<select name="<?php echo esc_attr( $this->get_field_name( 'orderby' ) ); ?>"
+					id="<?php echo esc_attr( $this->get_field_id( 'orderby' ) ); ?>" class="widefat">
 				<?php
 				$options = array(
 					esc_html__( 'None', 'lsx-testimonials' )                      => 'none',
@@ -225,13 +226,14 @@ class LSX_Testimonials_Widget extends WP_Widget {
 
 				foreach ( $options as $name => $value ) {
 					echo '<option value="' . esc_attr( $value ) . '" id="' . esc_attr( $value ) . '"', $orderby == $value ? ' selected="selected"' : '', '>', esc_html( $name ), '</option>';
-				} ?>
-            </select>
-        </p>
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>"><?php esc_html_e( 'Order:', 'lsx-testimonials' ); ?></label>
-            <select name="<?php echo esc_attr( $this->get_field_name( 'order' ) ); ?>"
-                    id="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>" class="widefat">
+				}
+				?>
+			</select>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>"><?php esc_html_e( 'Order:', 'lsx-testimonials' ); ?></label>
+			<select name="<?php echo esc_attr( $this->get_field_name( 'order' ) ); ?>"
+					id="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>" class="widefat">
 				<?php
 				$options = array(
 					esc_html__( 'Ascending', 'lsx-testimonials' )  => 'ASC',
@@ -240,27 +242,28 @@ class LSX_Testimonials_Widget extends WP_Widget {
 
 				foreach ( $options as $name => $value ) {
 					echo '<option value="' . esc_attr( $value ) . '" id="' . esc_attr( $value ) . '"', $order == $value ? ' selected="selected"' : '', '>', esc_html( $name ), '</option>';
-				} ?>
-            </select>
-        </p>
-        <p class="limit">
-            <label for="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"><?php esc_html_e( 'Maximum amount:', 'lsx-testimonials' ); ?></label>
-            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"
-                   name="<?php echo esc_attr( $this->get_field_name( 'limit' ) ); ?>" type="text"
-                   value="<?php echo esc_attr( $limit ); ?>"/>
-            <small><?php esc_html_e( 'Leave empty to display all', 'lsx-testimonials' ); ?></small>
-        </p>
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'include' ) ); ?>"><?php esc_html_e( 'Specify Testimonials by ID:', 'lsx-testimonials' ); ?></label>
-            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'include' ) ); ?>"
-                   name="<?php echo esc_attr( $this->get_field_name( 'include' ) ); ?>" type="text"
-                   value="<?php echo esc_attr( $include ); ?>"/>
-            <small><?php esc_html_e( 'Comma separated list, overrides limit and order settings', 'lsx-testimonials' ); ?></small>
-        </p>
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'display' ) ); ?>"><?php esc_html_e( 'Display:', 'lsx-testimonials' ); ?></label>
-            <select name="<?php echo esc_attr( $this->get_field_name( 'display' ) ); ?>"
-                    id="<?php echo esc_attr( $this->get_field_id( 'display' ) ); ?>" class="widefat">
+				}
+				?>
+			</select>
+		</p>
+		<p class="limit">
+			<label for="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"><?php esc_html_e( 'Maximum amount:', 'lsx-testimonials' ); ?></label>
+			 <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'limit' ) ); ?>" type="text"
+					value="<?php echo esc_attr( $limit ); ?>"/>
+			<small><?php esc_html_e( 'Leave empty to display all', 'lsx-testimonials' ); ?></small>
+			</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'include' ) ); ?>"><?php esc_html_e( 'Specify Testimonials by ID:', 'lsx-testimonials' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'include' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'include' ) ); ?>" type="text"
+					value="<?php echo esc_attr( $include ); ?>"/>
+			<small><?php esc_html_e( 'Comma separated list, overrides limit and order settings', 'lsx-testimonials' ); ?></small>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'display' ) ); ?>"><?php esc_html_e( 'Display:', 'lsx-testimonials' ); ?></label>
+			<select name="<?php echo esc_attr( $this->get_field_name( 'display' ) ); ?>"
+				id="<?php echo esc_attr( $this->get_field_id( 'display' ) ); ?>" class="widefat">
 				<?php
 				$options = array(
 					esc_html__( 'Excerpt', 'lsx-testimonials' )      => 'excerpt',
@@ -269,52 +272,53 @@ class LSX_Testimonials_Widget extends WP_Widget {
 
 				foreach ( $options as $name => $value ) {
 					echo '<option value="' . esc_attr( $value ) . '" id="' . esc_attr( $value ) . '"', $display == $value ? ' selected="selected"' : '', '>', esc_html( $name ), '</option>';
-				} ?>
-            </select>
-        </p>
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'size' ) ); ?>"><?php esc_html_e( 'Image size:', 'lsx-testimonials' ); ?></label>
-            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'size' ) ); ?>"
-                   name="<?php echo esc_attr( $this->get_field_name( 'size' ) ); ?>" type="text"
-                   value="<?php echo esc_attr( $size ); ?>"/>
-        </p>
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"><?php esc_html_e( 'Button "view all" text:', 'lsx-testimonials' ); ?></label>
-            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"
-                   name="<?php echo esc_attr( $this->get_field_name( 'button_text' ) ); ?>" type="text"
-                   value="<?php echo esc_attr( $button_text ); ?>"/>
-            <small><?php esc_html_e( 'Leave empty to not display the button', 'lsx-testimonials' ); ?></small>
-        </p>
-        <p>
-            <input id="<?php echo esc_attr( $this->get_field_id( 'show_image' ) ); ?>"
-                   name="<?php echo esc_attr( $this->get_field_name( 'show_image' ) ); ?>" type="checkbox"
-                   value="1" <?php checked( '1', $show_image ); ?> />
-            <label for="<?php echo esc_attr( $this->get_field_id( 'show_image' ) ); ?>"><?php esc_html_e( 'Display Images', 'lsx-testimonials' ); ?></label>
-        </p>
-        <p>
-            <input id="<?php echo esc_attr( $this->get_field_id( 'responsive' ) ); ?>"
-                   name="<?php echo esc_attr( $this->get_field_name( 'responsive' ) ); ?>" type="checkbox"
-                   value="1" <?php checked( '1', $responsive ); ?> />
-            <label for="<?php echo esc_attr( $this->get_field_id( 'responsive' ) ); ?>"><?php esc_html_e( 'Responsive Images', 'lsx-testimonials' ); ?></label>
-        </p>
-        <p>
-            <input id="<?php echo esc_attr( $this->get_field_id( 'carousel' ) ); ?>"
-                   name="<?php echo esc_attr( $this->get_field_name( 'carousel' ) ); ?>" type="checkbox"
-                   value="1" <?php checked( '1', $carousel ); ?> />
-            <label for="<?php echo esc_attr( $this->get_field_id( 'carousel' ) ); ?>"><?php esc_html_e( 'Carousel', 'lsx-testimonials' ); ?></label>
-        </p>
-        <p>
-            <input id="<?php echo esc_attr( $this->get_field_id( 'featured' ) ); ?>"
-                   name="<?php echo esc_attr( $this->get_field_name( 'featured' ) ); ?>" type="checkbox"
-                   value="1" <?php checked( '1', $featured ); ?> />
-            <label for="<?php echo esc_attr( $this->get_field_id( 'featured' ) ); ?>"><?php esc_html_e( 'Featured posts', 'lsx-testimonials' ); ?></label>
-        </p>
-        <p>
-            <input id="<?php echo esc_attr( $this->get_field_id( 'col_tags' ) ); ?>"
-                   name="<?php echo esc_attr( $this->get_field_name( 'col_tags' ) ); ?>" type="checkbox"
-                   value="1" <?php checked( '1', $col_enabled ); ?> />
-            <label for="<?php echo esc_attr( $this->get_field_id( 'col_tags' ) ); ?>"><?php esc_html_e( 'Enable Canonical Tags', 'lsx-testimonials' ); ?></label>
-        </p>
+				}
+				?>
+			</select>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'size' ) ); ?>"><?php esc_html_e( 'Image size:', 'lsx-testimonials' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'size' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'size' ) ); ?>" type="text"
+					value="<?php echo esc_attr( $size ); ?>"/>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"><?php esc_html_e( 'Button "view all" text:', 'lsx-testimonials' ); ?></label>
+				<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'button_text' ) ); ?>" type="text"
+					value="<?php echo esc_attr( $button_text ); ?>"/>
+				<small><?php esc_html_e( 'Leave empty to not display the button', 'lsx-testimonials' ); ?></small>
+		</p>
+		<p>
+		<input id="<?php echo esc_attr( $this->get_field_id( 'show_image' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'show_image' ) ); ?>" type="checkbox"
+					value="1" <?php checked( '1', $show_image ); ?> />
+		<label for="<?php echo esc_attr( $this->get_field_id( 'show_image' ) ); ?>"><?php esc_html_e( 'Display Images', 'lsx-testimonials' ); ?></label>
+		</p>
+		<p>
+			<input id="<?php echo esc_attr( $this->get_field_id( 'responsive' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'responsive' ) ); ?>" type="checkbox"
+						value="1" <?php checked( '1', $responsive ); ?> />
+			<label for="<?php echo esc_attr( $this->get_field_id( 'responsive' ) ); ?>"><?php esc_html_e( 'Responsive Images', 'lsx-testimonials' ); ?></label>
+		</p>
+		<p>
+			<input id="<?php echo esc_attr( $this->get_field_id( 'carousel' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'carousel' ) ); ?>" type="checkbox"
+					value="1" <?php checked( '1', $carousel ); ?> />
+			<label for="<?php echo esc_attr( $this->get_field_id( 'carousel' ) ); ?>"><?php esc_html_e( 'Carousel', 'lsx-testimonials' ); ?></label>
+		</p>
+		<p>
+			<input id="<?php echo esc_attr( $this->get_field_id( 'featured' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'featured' ) ); ?>" type="checkbox"
+					value="1" <?php checked( '1', $featured ); ?> />
+			<label for="<?php echo esc_attr( $this->get_field_id( 'featured' ) ); ?>"><?php esc_html_e( 'Featured posts', 'lsx-testimonials' ); ?></label>
+		</p>
+		<p>
+			<input id="<?php echo esc_attr( $this->get_field_id( 'col_tags' ) ); ?>"
+				name="<?php echo esc_attr( $this->get_field_name( 'col_tags' ) ); ?>" type="checkbox"
+				value="1" <?php checked( '1', $col_enabled ); ?> />
+			<label for="<?php echo esc_attr( $this->get_field_id( 'col_tags' ) ); ?>"><?php esc_html_e( 'Enable Canonical Tags', 'lsx-testimonials' ); ?></label>
+		</p>
 		<?php
 	}
 }
