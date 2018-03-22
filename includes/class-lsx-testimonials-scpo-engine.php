@@ -34,7 +34,7 @@ class LSX_Testimonials_SCPO_Engine {
 		update_option( 'LSX_Testimonials_Scporder_Install', 1 );
 	}
 
-	function _Check_Load_Script_Css() {
+	function check_load_script_css() {
 		$active  = false;
 		$objects = $this->get_lsx_testimonials_scporder_options_objects();
 
@@ -59,10 +59,10 @@ class LSX_Testimonials_SCPO_Engine {
 	}
 
 	function load_script_css() {
-		if ( $this->_Check_Load_Script_Css() ) {
+		if ( $this->check_load_script_css() ) {
 			wp_enqueue_script( 'scporderjs', LSX_TESTIMONIALS_URL . 'assets/js/scporder.min.js', array(
 				'jquery',
-				'jquery-ui-sortable'
+				'jquery-ui-sortable',
 			), null, true );
 
 			$scporderjs_params = array(
@@ -100,7 +100,9 @@ class LSX_Testimonials_SCPO_Engine {
 				", $object ) );
 
 				foreach ( $results as $key => $result ) {
-					$wpdb->update( $wpdb->posts, array( 'menu_order' => $key + 1 ), array( 'ID' => $result->ID ) );
+					$wpdb->update( $wpdb->posts,
+						array( 'menu_order' => $key + 1 ),
+						array( 'ID' => $result->ID ) );
 				}
 			}
 		}
@@ -138,7 +140,9 @@ class LSX_Testimonials_SCPO_Engine {
 
 		foreach ( $data as $key => $values ) {
 			foreach ( $values as $position => $id ) {
-				$wpdb->update( $wpdb->posts, array( 'menu_order' => $menu_order_arr[ $position ] ), array( 'ID' => intval( $id ) ) );
+				$wpdb->update( $wpdb->posts,
+					array( 'menu_order' => $menu_order_arr[ $position ] ),
+					array( 'ID' => intval( $id ) ) );
 			}
 		}
 	}

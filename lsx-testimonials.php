@@ -41,4 +41,4 @@ require_once( LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-widget.ph
 require_once( LSX_TESTIMONIALS_PATH . '/includes/functions.php' );
 
 // Post reorder
-require_once( LSX_TESTIMONIALS_PATH . '/includes/post-order.php' );
+require_once( LSX_TESTIMONIALS_PATH . '/includes/class-lsx-testimonials-scpo-engine.php' );
