@@ -23,7 +23,7 @@ add_action( 'init', 'lsx_testimonials_load_plugin_textdomain' );
  */
 
 function lsx_testimonials( $args ) {
-	$lsx_testimonials = new LSX_Testimonials();
+	$lsx_testimonials = new LSX_Testimonials;
 	echo wp_kses_post( $lsx_testimonials->output( $args ) );
 }
 
@@ -31,7 +31,7 @@ function lsx_testimonials( $args ) {
  * Shortcode
  */
 function lsx_testimonials_shortcode( $atts ) {
-	$lsx_testimonials = new LSX_Testimonials();
+	$lsx_testimonials = new LSX_Testimonials;
 
 	return $lsx_testimonials->output( $atts );
 }
@@ -61,3 +61,4 @@ function cpad_at_glance_content_table_end() {
 		}
 	}
 }
+
