@@ -9,8 +9,7 @@
  * @link
  * @copyright 2018 LightSpeed
  */
-class LSX_Testimonials
-{
+class LSX_Testimonials {
     public $columns;
     public $responsive;
     public $options;
