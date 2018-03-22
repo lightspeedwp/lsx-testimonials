@@ -13,6 +13,7 @@ $lsx_testimonials_scporder = new LSX_Testimonials_SCPO_Engine();
  */
 class LSX_Testimonials_SCPO_Engine
 {
+
     function __construct()
     {
         if (! get_option('lsx_testimonials_scporder_install')) {
@@ -65,10 +66,16 @@ class LSX_Testimonials_SCPO_Engine
     function load_script_css()
     {
         if ($this->check_load_script_css()) {
-            wp_enqueue_script('scporderjs', LSX_TESTIMONIALS_URL . 'assets/js/scporder.min.js', array(
-                'jquery',
-                'jquery-ui-sortable',
-            ), null, true);
+            wp_enqueue_script(
+                'scporderjs',
+                LSX_TESTIMONIALS_URL . 'assets/js/scporder.min.js',
+                array(
+                    'jquery',
+                    'jquery-ui-sortable',
+                ),
+                null,
+                true
+            );
 
             $scporderjs_params = array(
                 'ajax_url'   => admin_url('admin-ajax.php'),
@@ -88,22 +95,32 @@ class LSX_Testimonials_SCPO_Engine
 
         if (! empty($objects)) {
             foreach ($objects as $object => $object_data) {
-                $result = $wpdb->get_results($wpdb->prepare("
+                $result = $wpdb->get_results(
+                    $wpdb->prepare(
+                        "
 					SELECT count(*) as cnt, max(menu_order) as max, min(menu_order) as min
 					FROM $wpdb->posts
 					WHERE post_type = '%s' AND post_status IN ('publish', 'pending', 'draft', 'private', 'future')
-				", $object));
+				",
+                        $object
+                    )
+                );
 
                 if (0 == $result[0]->cnt || $result[0]->cnt == $result[0]->max) {
                     continue;
                 }
 
-                $results = $wpdb->get_results($wpdb->prepare("
+                $results = $wpdb->get_results(
+                    $wpdb->prepare(
+                        "
 					SELECT ID
 					FROM $wpdb->posts
 					WHERE post_type = '%s' AND post_status IN ('publish', 'pending', 'draft', 'private', 'future')
 					ORDER BY menu_order ASC
-				", $object));
+				",
+                        $object
+                    )
+                );
 
                 foreach ($results as $key => $result) {
                     $wpdb->update(
