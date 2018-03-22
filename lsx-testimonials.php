@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'LSX_TESTIMONIALS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'LSX_TESTIMONIALS_CORE', __FILE__ );
 define( 'LSX_TESTIMONIALS_URL', plugin_dir_url( __FILE__ ) );
-define( 'LSX_TESTIMONIALS_VER', '1.1.1' );
+define( 'LSX_TESTIMONIALS_VER', '1.1.3' );
 
 
 /* ======================= Below is the Plugin Class init ========================= */

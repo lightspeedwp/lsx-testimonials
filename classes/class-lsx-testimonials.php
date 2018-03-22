@@ -9,7 +9,8 @@
  * @link
  * @copyright 2018 LightSpeed
  */
-class LSX_Testimonials  {
+class LSX_Testimonials
+{
     public $columns;
     public $responsive;
     public $options;
@@ -17,16 +18,16 @@ class LSX_Testimonials  {
     public function __construct()
     {
         if (function_exists('tour_operator')) {
-            $this->options = get_option('_lsx-to_settings', false);
+            $this->options = get_option( '_lsx-to_settings', false );
         } else {
-            $this->options = get_option('_lsx_settings', false);
+            $this->options = get_option( '_lsx_settings', false );
 
             if (false === $this->options) {
-                $this->options = get_option('_lsx_lsx-settings', false);
+                $this->options = get_option( '_lsx_lsx-settings', false );
             }
         }
 
-        add_filter('lsx_banner_allowed_post_types', array( $this, 'lsx_banner_allowed_post_types' ));
+        add_filter( 'lsx_banner_allowed_post_types', array( $this, 'lsx_banner_allowed_post_types' ));
     }
 
     /**
