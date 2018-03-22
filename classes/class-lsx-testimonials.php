@@ -51,14 +51,14 @@ class LSX_Testimonials {
 
 		$thumbnail = '';
 
-		if ( ! empty( get_the_post_thumbnail ( $post_id ) ) ) {
+		if ( ! empty (get_the_post_thumbnail( $post_id ) ) ) {
 			$thumbnail = get_the_post_thumbnail($post_id, $thumb_size, array(
 				'class' => $thumbnail_class,
 			));
-		} elseif (! empty(get_post_meta($post_id, 'lsx_testimonial_email_gravatar', true))) {
-			$thumbnail = get_avatar(get_post_meta($post_id, 'lsx_testimonial_email_gravatar', true), $size, $this->options['display']['testimonials_placeholder'], false, array(
-			'class' => $thumbnail_class,
-		));
+		} elseif ( ! empty( get_post_meta( $post_id, 'lsx_testimonial_email_gravatar', true ) ) ) {
+			$thumbnail = get_avatar( get_post_meta( $post_id, 'lsx_testimonial_email_gravatar', true ), $size, $this->options['display']['testimonials_placeholder'], false, array(
+				'class' => $thumbnail_class,
+			));
 		} else {
 			$thumbnail = '';
 		}
@@ -80,8 +80,7 @@ class LSX_Testimonials {
 	/**
 	* Replaces the widget with Mystery Man
 	*/
-	public function placeholder($image)
-	{
+	public function placeholder( $image ) {
 		$image = array(
 			LSX_TESTIMONIALS_URL . 'assets/img/mystery-man-square.png',
 			512,
@@ -109,7 +108,7 @@ class LSX_Testimonials {
 
 		$output = '';
 
-		if ('true' === $responsive || true === $responsive) {
+		if ( 'true' === $responsive || true === $responsive ) {
 			$responsive = 'img-responsive';
 		} else {
 			$responsive = '';
@@ -118,8 +117,8 @@ class LSX_Testimonials {
 		$this->columns    = $columns;
 		$this->responsive = $responsive;
 
-		if ( ! empty($include)) {
-			$include = explode(',', $include);
+		if ( ! empty( $include ) ) {
+			$include = explode( ',', $include );
 
 			$args = array(
 				'post_type'      => 'testimonial',
@@ -136,27 +135,27 @@ class LSX_Testimonials {
 				'order'          => $order,
 			);
 
-			if ('true' === $featured || true === $featured) {
+			if ( 'true' === $featured || true === $featured ) {
 				$args['meta_key']   = 'lsx_testimonial_featured';
 				$args['meta_value'] = 1;
 			}
 		}
 
-		$testimonials = new \WP_Query($args);
+		$testimonials = new \WP_Query( $args );
 
-		if ($testimonials->have_posts()) {
+		if ( $testimonials->have_posts() ) {
 			global $post;
 
 			$count        = 0;
 			$count_global = 0;
 
-			if ('true' === $carousel || true === $carousel) {
+			if ( 'true' === $carousel || true === $carousel ) {
 				$output .= "<div id='lsx-testimonials-slider' class='lsx-testimonials-shortcode' data-slick='{\"slidesToShow\": $columns, \"slidesToScroll\": $columns }'>";
 			} else {
 				$output .= "<div class='lsx-testimonials-shortcode'><div class='row'>";
 			}
 
-			while ($testimonials->have_posts()) {
+			while ( $testimonials->have_posts() ) {
 				$testimonials->the_post();
 
 				// Count.
@@ -181,25 +180,25 @@ class LSX_Testimonials {
 
 				// Content.
 				if ( 'full' === $display ) {
-					$content = apply_filters( 'the_content', get_the_content( esc_html__( 'Read More', 'lsx-testimonials') ) );
-					$content = str_replace(']]>', ']]&gt;', $content);
-				} elseif ('excerpt' === $display) {
-					$content = apply_filters( 'the_excerpt', get_the_excerpt());
+					$content = apply_filters( 'the_content', get_the_content( esc_html__( 'Read More', 'lsx-testimonials' ) ) );
+					$content = str_replace( ']]>', ']]&gt;', $content );
+				} elseif ( 'excerpt' === $display ) {
+					$content = apply_filters( 'the_excerpt', get_the_excerpt() );
 				}
 
 				// Image.
-				if ('true' === $show_image || true === $show_image) {
-					$image = $this->get_thumbnail($post->ID, $size, $responsive);
+				if ( 'true' === $show_image || true === $show_image ) {
+					$image = $this->get_thumbnail( $post->ID, $size, $responsive );
 				} else {
 					$image = '';
 				}
 
-				if ('true' === $carousel || true === $carousel) {
+				if ( 'true' === $carousel || true === $carousel ) {
 					$output .= "
 						<div class='lsx-testimonials-slot'>
-							" . (! empty($image) ? "<figure class='lsx-testimonials-avatar'>$image</figure>" : "") . "
-							<h5 class='lsx-testimonials-title'><a href='" . get_permalink() . "'>" . apply_filters('the_title', $post->post_title) . "</a></h5>
-							" . (! empty($byline) ? "<small class='lsx-testimonials-meta-wrap'><i class='fa fa-briefcase'></i> <span class='lsx-testimonials-meta'>" . esc_html__('Role & Company', 'lsx-testimonials') . ":</span> " . $link_open . $byline . $link_close . "</small>" : "") . "
+							" . ( ! empty( $image ) ? "<figure class='lsx-testimonials-avatar'>$image</figure>" : "") . "
+							<h5 class='lsx-testimonials-title'><a href='" . get_permalink() . "'>" . apply_filters( 'the_title', $post->post_title) . "</a></h5>
+							" . ( ! empty($byline) ? "<small class='lsx-testimonials-meta-wrap'><i class='fa fa-briefcase'></i> <span class='lsx-testimonials-meta'>" . esc_html__( 'Role & Company', 'lsx-testimonials' ) . ":</span> " . $link_open . $byline . $link_close . "</small>" : "") . "
 							<blockquote class='lsx-testimonials-content'>$content</blockquote>
 						</div>";
 				} elseif ( $columns >= 1 && $columns <= 4 ) {
@@ -208,9 +207,9 @@ class LSX_Testimonials {
 					$output .= "
 						<div class='col-xs-12 col-md-" . $md_col_width . "'>
 							<div class='lsx-testimonials-slot'>
-								" . (! empty($image) ? "<figure class='lsx-testimonials-avatar'>$image</figure>" : "") . "
-								<h5 class='lsx-testimonials-title'><a href='" . get_permalink() . "'>" . apply_filters('the_title', $post->post_title) . "</a></h5>
-								" . (! empty($byline) ? "<small class='lsx-testimonials-meta-wrap'><i class='fa fa-briefcase'></i> <span class='lsx-testimonials-meta'>" . esc_html__('Role & Company', 'lsx-testimonials') . ":</span> " . $link_open . $byline . $link_close . "</small>" : "") . "
+								" . ( ! empty( $image ) ? "<figure class='lsx-testimonials-avatar'>$image</figure>" : "") . "
+								<h5 class='lsx-testimonials-title'><a href='" . get_permalink() . "'>" . apply_filters( 'the_title', $post->post_title ) . "</a></h5>
+								" . ( ! empty( $byline ) ? "<small class='lsx-testimonials-meta-wrap'><i class='fa fa-briefcase'></i> <span class='lsx-testimonials-meta'>" . esc_html__( 'Role & Company', 'lsx-testimonials' ) . ":</span> " . $link_open . $byline . $link_close . "</small>" : "" ) . "
 								<blockquote class='lsx-testimonials-content'>$content</blockquote>
 							</div>
 						</div>";
@@ -223,18 +222,18 @@ class LSX_Testimonials {
 				} else {
 					$output .= "
 						<p class='bg-warning' style='padding: 20px;'>
-							" . esc_html__('Invalid number of columns set. LSX Testimonials supports 1 to 4 columns.', 'lsx-testimonials') . "
-						</p>";
-			}
+							" . esc_html__( 'Invalid number of columns set. LSX Testimonials supports 1 to 4 columns.', 'lsx-testimonials' ) . '
+						</p>';
+				}
 
 				 wp_reset_postdata();
 			}
 
-			if ('true' !== $carousel && true !== $carousel) {
-				$output .= "</div>";
+			if ( 'true' !== $carousel && true !== $carousel ) {
+				$output .= '</div>';
 			}
 
-			$output .= "</div>";
+			$output .= '</div>';
 
 			return $output;
 		}
