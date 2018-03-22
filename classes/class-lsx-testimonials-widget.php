@@ -309,6 +309,12 @@ class LSX_Testimonials_Widget extends WP_Widget {
                    value="1" <?php checked( '1', $featured ); ?> />
             <label for="<?php echo esc_attr( $this->get_field_id( 'featured' ) ); ?>"><?php esc_html_e( 'Featured posts', 'lsx-testimonials' ); ?></label>
         </p>
+        <p>
+            <input id="<?php echo esc_attr( $this->get_field_id( 'col_tags' ) ); ?>"
+                   name="<?php echo esc_attr( $this->get_field_name( 'col_tags' ) ); ?>" type="checkbox"
+                   value="1" <?php checked( '1', $col_enabled ); ?> />
+            <label for="<?php echo esc_attr( $this->get_field_id( 'col_tags' ) ); ?>"><?php esc_html_e( 'Enable Canonical Tags', 'lsx-testimonials' ); ?></label>
+        </p>
 		<?php
 	}
 }
