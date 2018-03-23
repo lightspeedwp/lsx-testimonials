@@ -149,10 +149,10 @@ class LSX_Testimonials_SCPO_Engine {
 				$wpdb->update(
 					$wpdb->posts,
 					array(
-						'menu_order' => $menu_order_arr[ $position ]
+						'menu_order' => $menu_order_arr[ $position ],
 					),
 					array(
-						'ID' => intval( $id )
+						'ID' => intval( $id ),
 					)
 				);
 			}
