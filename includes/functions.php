@@ -57,8 +57,7 @@ function cpad_at_glance_content_table_end() {
 		$text = _n( $post_type->labels->singular_name, $post_type->labels->name, intval( $num_posts->publish ) );
 		if ( current_user_can( 'edit_posts' ) ) {
 			$output = '<a href="edit.php?post_type=' . $post_type->name . '">' . $num . ' ' . $text . '</a>';
-			echo '<li class="post-count ' . $post_type->name . '-count">' . $output . '</li>';
+			echo esc_html( '<li class="post-count ' . $post_type->name . '-count">' . $output . '</li>' );
 		}
 	}
 }
-
