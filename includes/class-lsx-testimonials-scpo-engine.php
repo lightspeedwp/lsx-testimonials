@@ -100,9 +100,15 @@ class LSX_Testimonials_SCPO_Engine {
 				", $object ) );
 
 				foreach ( $results as $key => $result ) {
-					$wpdb->update( $wpdb->posts,
-						array( 'menu_order' => $key + 1 ),
-						array( 'ID' => $result->ID ) );
+					$wpdb->update(
+						$wpdb->posts,
+						array(
+							'menu_order' => $key + 1,
+						),
+						array(
+							'ID' => $result->ID,
+						)
+					);
 				}
 			}
 		}
