@@ -41,7 +41,7 @@ add_shortcode( 'lsx_testimonials', 'lsx_testimonials_shortcode' );
 /**
  * Adds the post type count to the admin dashboard "At a Glance" section
  */
-add_action( 'dashboard_glance_items', 'cpad_at_glance_content_table_end' );
+/*add_action( 'dashboard_glance_items', 'cpad_at_glance_content_table_end' );
 function cpad_at_glance_content_table_end() {
 	$args     = array(
 		'public'   => true,
@@ -54,10 +54,10 @@ function cpad_at_glance_content_table_end() {
 	foreach ( $post_types as $post_type ) {
 		$num_posts = wp_count_posts( $post_type->name );
 		$num       = number_format_i18n( $num_posts->publish );
-		$text      = _n( $post_type->labels->singular_name, $post_type->labels->name, intval( $num_posts->publish ) );
+		$text      =  $post_type->labels->singular_name, $post_type->labels->name, intval( $num_posts->publish );
 		if ( current_user_can( 'edit_posts' ) ) {
 			$output = '<a href="edit.php?post_type=' . $post_type->name . '">' . $num . ' ' . $text . '</a>';
 			echo esc_html( '<li class="post-count ' . $post_type->name . '-count">' . $output . '</li>' );
 		}
 	}
-}
+}*/
