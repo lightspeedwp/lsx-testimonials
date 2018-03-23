@@ -198,7 +198,7 @@ class LSX_Testimonials {
 						<div class='lsx-testimonials-slot'>
 							" . ( ! empty( $image ) ? "<figure class='lsx-testimonials-avatar'>$image</figure>" : "" ) . "
 							<h5 class='lsx-testimonials-title'><a href='" . get_permalink() . "'>" . apply_filters( 'the_title', $post->post_title ) . "</a></h5>
-							' . ( ! empty( $byline ) ? "<small class='lsx-testimonials-meta-wrap'><i class='fa fa-briefcase'></i> <span class='lsx-testimonials-meta'>" . esc_html__( 'Role & Company', 'lsx-testimonials' ) . ':</span> ' . $link_open . $byline . $link_close . '</small>' : "" ) . '
+							" . ( ! empty( $byline ) ? "<small class='lsx-testimonials-meta-wrap'><i class='fa fa-briefcase'></i> <span class='lsx-testimonials-meta'>" . esc_html__( 'Role & Company', 'lsx-testimonials' ) . ":</span> " . $link_open . $byline . $link_close . "</small>" : "" ) . "
 							<blockquote class='lsx-testimonials-content'>$content</blockquote>
 						</div>";
 				} elseif ( $columns >= 1 && $columns <= 4 ) {
