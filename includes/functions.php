@@ -41,7 +41,7 @@ add_shortcode( 'lsx_testimonials', 'lsx_testimonials_shortcode' );
 /**
  * Adds the post type count to the admin dashboard "At a Glance" section
  */
-/*add_action( 'dashboard_glance_items', 'cpad_at_glance_content_table_end' );
+add_action( 'dashboard_glance_items', 'cpad_at_glance_content_table_end' );
 function cpad_at_glance_content_table_end() {
 	$args     = array(
 		'public'   => true,
@@ -60,4 +60,4 @@ function cpad_at_glance_content_table_end() {
 			echo esc_html( '<li class="post-count ' . $post_type->name . '-count">' . $output . '</li>' );
 		}
 	}
-}*/
+}
