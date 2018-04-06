@@ -43,7 +43,7 @@ class LSX_Testimonials {
 		add_filter( 'lsx_placeholder_url', array( $this, 'placeholder' ), 10, 1 );
 		add_filter( 'lsx_to_placeholder_url', array( $this, 'placeholder' ), 10, 1 );
 
-		if ( s_numeric( $size ) ) {
+		if ( is_numeric( $size ) ) {
 			$thumb_size = array( $size, $size );
 		} else {
 			$thumb_size = $size;
