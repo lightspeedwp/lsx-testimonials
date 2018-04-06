@@ -2,6 +2,7 @@
 
 ### 1.1.2
 * Dev - Removed the deprecated "create_function" call
+* Fix - Fixing the broken method name 's_numeric'
 
 ### 1.1.1
 * Dev - Added compatibility with LSX Videos
