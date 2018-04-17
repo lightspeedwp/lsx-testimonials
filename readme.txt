@@ -1,7 +1,7 @@
-=== Testimonials ===
+=== LSX Testimonials ===
 Contributors: feedmymedia
 Donate link: https://www.lsdev.biz/product/lsx-testimonials/
-Tags: testimonials, post type, front-end
+Tags: lsx, lsx theme, testimonials, post type, front-end
 Requires at least: 4.3
 Tested up to: 4.9.4
 Requires PHP: 7.0
