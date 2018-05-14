@@ -327,6 +327,6 @@ class LSX_Testimonials_Widget extends WP_Widget {
  * Registers the Widget
  */
 function lsx_testimonials_widget() {
-	register_widget( "LSX_Testimonials_Widget" );
+	register_widget( 'LSX_Testimonials_Widget' );
 }
 add_action( 'widgets_init', 'lsx_testimonials_widget' );

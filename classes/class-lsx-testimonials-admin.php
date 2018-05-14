@@ -327,7 +327,8 @@ class LSX_Testimonials_Admin {
 	/**
 	 * Outputs the Display flags checkbox
 	 */
-	public function disable_single_post_field() { ?>
+	public function disable_single_post_field() {
+		?>
 		<tr class="form-field">
 			<th scope="row">
 				<label for="testimonials_disable_single"><?php esc_html_e( 'Disable Single Posts', 'lsx-testimonials' ); ?></label>
@@ -342,7 +343,8 @@ class LSX_Testimonials_Admin {
 	/**
 	 * Outputs the flag position field
 	 */
-	public function placeholder_field() { ?>
+	public function placeholder_field() {
+		?>
 		<tr class="form-field">
 			<th scope="row">
 				<label for="banner"> <?php esc_html_e( 'Placeholder', 'lsx-testimonials' ); ?></label>
