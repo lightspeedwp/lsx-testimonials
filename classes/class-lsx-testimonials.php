@@ -110,6 +110,7 @@ class LSX_Testimonials {
 					'show_image' => 'true',
 					'carousel'   => 'true',
 					'featured'   => 'false',
+					'title'      => ' ',
 				), $atts
 			)
 		);
@@ -156,6 +157,11 @@ class LSX_Testimonials {
 
 			$count        = 0;
 			$count_global = 0;
+
+			$this->title    = $title;
+			if ( ! empty( $title ) ) {
+				$output .= '<h2 class="lsx-title text-center">' . $title . '</h2>';
+			}
 
 			if ( 'true' === $carousel || true === $carousel ) {
 				$output .= "<div id='lsx-testimonials-slider' class='lsx-testimonials-shortcode' data-slick='{\"slidesToShow\": $columns, \"slidesToScroll\": $columns }'>";
