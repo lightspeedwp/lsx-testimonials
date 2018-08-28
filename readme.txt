@@ -5,7 +5,7 @@ Tags: lsx, lsx theme, testimonials, post type, front-end
 Requires at least: 4.3
 Tested up to: 4.9.4
 Requires PHP: 7.0
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv3
 
 The LSX Testimonial plugin The LSX Testimonials extension adds the “Testimonials” post type, which you can display front-and-centre on your site.

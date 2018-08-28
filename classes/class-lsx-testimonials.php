@@ -164,7 +164,7 @@ class LSX_Testimonials {
 			}
 
 			if ( 'true' === $carousel || true === $carousel ) {
-				$output .= "<div id='lsx-testimonials-slider' class='lsx-testimonials-shortcode' data-slick='{\"slidesToShow\": $columns, \"slidesToScroll\": $columns }'>";
+				$output .= "<div id='lsx-testimonials-slider' class='lsx-testimonials-shortcode' data-lsx-slick='{\"slidesToShow\": $columns, \"slidesToScroll\": $columns }'>";
 			} else {
 				$output .= "<div class='lsx-testimonials-shortcode'><div class='row'>";
 			}

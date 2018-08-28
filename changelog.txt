@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.1.5
+* Dev - Remove the inline attributes for the "data-slick" attribute and marged them with the JS code.
+
 ### 1.1.4
 * Dev - Removed the deprecated "create_function" call
 * Fix - Fixing the broken method name 's_numeric'
