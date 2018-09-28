@@ -68,7 +68,7 @@ class LSX_Testimonials_Frontend {
 	}
 
 	public function wp_kses_allowed_html( $allowedtags, $context ) {
-		$allowedtags['div']['data-slick'] = true;
+		$allowedtags['div']['data-lsx-slick'] = true;
 
 		return $allowedtags;
 	}
