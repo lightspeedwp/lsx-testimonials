@@ -1,5 +1,8 @@
 ## Changelog
 
+###
+* Dev - Changed the JS to trigger on page load and not right away.
+
 ### 1.1.5
 * Dev - Remove the inline attributes for the "data-slick" attribute and marged them with the JS code.
 
