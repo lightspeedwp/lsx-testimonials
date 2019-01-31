@@ -1,7 +1,8 @@
 ## Changelog
 
-###
+### 1.1.6
 * Dev - Changed the JS to trigger on page load and not right away.
+* Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options
 
 ### 1.1.5
 * Dev - Remove the inline attributes for the "data-slick" attribute and marged them with the JS code.
