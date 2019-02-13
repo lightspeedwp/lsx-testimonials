@@ -343,6 +343,7 @@
 
 		.lsx-testimonials-content {
 			margin-top: calc(25px + 1.2rem);
+			border-color: #dadddf;
 
 			@include media('>=tablet') { margin-top: calc(30px + 1.2rem); }
 		}

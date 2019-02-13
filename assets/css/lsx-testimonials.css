@@ -113,7 +113,7 @@
 
 .post-type-archive-testimonial .lsx-testimonials-slot .lsx-testimonials-title { margin-bottom: 5px; }
 
-.post-type-archive-testimonial .lsx-testimonials-slot .lsx-testimonials-content { margin-top: calc(25px + 1.2rem); }
+.post-type-archive-testimonial .lsx-testimonials-slot .lsx-testimonials-content { margin-top: calc(25px + 1.2rem); border-color: #dadddf; }
 
 @media (min-width: 992px) { .post-type-archive-testimonial .lsx-testimonials-slot .lsx-testimonials-content { margin-top: calc(30px + 1.2rem); } }
 
