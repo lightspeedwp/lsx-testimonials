@@ -1,9 +1,9 @@
 === LSX Testimonials ===
 Contributors: feedmymedia
-Donate link: https://www.lsdev.biz/product/lsx-testimonials/
+Donate link: https://donate.lsdev.biz/
 Tags: lsx, lsx theme, Gutenberg, testimonials, post type
 Requires at least: 4.3
-Tested up to: 4.9.4
+Tested up to: 5.1.1
 Requires PHP: 7.0
 Stable tag: 1.1.5
 License: GPLv3
