@@ -7,7 +7,7 @@ The LSX Testimonial adds a “Testimonials” post type to your LSX theme run we
 The most convincing way to gain credibility for your business is to have users share their experience of your product or service. The [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) allows you to collect and display these Testimonials easily on your website.
 
 ## Works with the LSX Theme
-Our theme [theme](https://lsx.lsdev.biz/) works perfectly with the LSX Search, improving search capabilties.
+Our [theme](https://lsx.lsdev.biz/) works perfectly with the LSX Search, improving search capabilties.
 
 ## Gutenberg Compatible
 Have you updated to the new WordPress Gutenberg editor? We've got you covered! [The LSX Theme](https://lsx.lsdev.biz/) and all of its extensions have been optimised to work perfectly with the new Gutenberg update. 
