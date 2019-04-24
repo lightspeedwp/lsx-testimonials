@@ -63,7 +63,7 @@
 	$tab_service['title'] = esc_html__( 'Services', 'lsx-testimonials' );
 	$tab_service['posts'] = get_post_meta( get_the_ID(), 'service_to_testimonial', false );
 
-	if ( ! empty( $tab_service['posts'] ) ) {
+	if ( ! empty( $tab_service['posts'] ) && is_plugin_active( 'lsx-services/lsx-services.php' ) ) {
 		$post_ids = join( ',', $tab_service['posts'] );
 		// $tab_service['shortcode'] = '[lsx_services columns="3" include="' . $post_ids . '"]';
 
