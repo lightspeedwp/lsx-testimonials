@@ -40,7 +40,13 @@
     "map-stream": "^0.0.7"
   },
   "dependencies": {
+    "braces": "^2.3.1",
+    "clean-css": "^4.1.11",
+    "concat-with-sourcemaps": "^1.0.6",
     "extend": "^3.0.2",
-    "lodash": "^4.17.11"
+    "fstream": "^1.0.12",
+    "lodash": "^4.17.11",
+    "sshpk": "^1.13.2",
+    "tar": "^2.2.2"
   }
 }
