@@ -1,9 +1,9 @@
 <?php
 /*
  * Plugin Name: LSX Testimonials
- * Plugin URI:  https://www.lsdev.biz/product/lsx-testimonials/
+ * Plugin URI:  https://lsx.lsdev.biz/extensions/testimonials/
  * Description: The LSX Testimonials extension adds the "Testimonials" post type.
- * Version:     1.1.5
+ * Version:     1.1.6
  * Author:      LightSpeed
  * Author URI:  https://www.lsdev.biz/
  * License:     GPL3
@@ -12,7 +12,7 @@
  * Domain Path: /languages
  */
 
-// If this file is called directly, abort.
+// If this file is called directly, abort. 
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
@@ -20,12 +20,13 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'LSX_TESTIMONIALS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'LSX_TESTIMONIALS_CORE', __FILE__ );
 define( 'LSX_TESTIMONIALS_URL', plugin_dir_url( __FILE__ ) );
-define( 'LSX_TESTIMONIALS_VER', '1.1.5' );
+define( 'LSX_TESTIMONIALS_VER', '1.1.5' ); 
 
 
 /* ======================= Below is the Plugin Class init ========================= */
 
 // Post Type and Custom Fields
+
 require_once( LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-admin.php' );
 
 // Frontend scripts and styles

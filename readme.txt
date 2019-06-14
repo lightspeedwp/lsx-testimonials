@@ -3,58 +3,43 @@ Contributors: feedmymedia
 Donate link: https://donate.lsdev.biz/
 Tags: lsx, lsx theme, Gutenberg, testimonials, post type
 Requires at least: 4.3
-Tested up to: 5.1.1
+Tested up to: 5.2.1
 Requires PHP: 7.0
-Stable tag: 1.1.5
-License: GPLv3
+Stable tag: 1.1.6
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-The LSX Testimonial adds a “Testimonials” post type to your LSX theme run website. This allows you to store all of your testimonials/reviews and display them in an attractive slider or grid. 
+The [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) adds a section to your website for storing your testimonial information. 
 
-== Description ==
+Create a profile per testimonial, display them in an attractive carousel and house them all in an archive for all your users to view. 
 
-The most convincing way to gain credibility for your business is to have users share their experience of your product or service. The [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) allows you to collect and display these Testimonials easily on your website.
+People like to see a face behind a business, it gives you a more personal, approachable relationship with your users. 
 
-= Works with the LSX Theme =
-Our theme [theme](https://lsx.lsdev.biz/) works perfectly with the LSX Search, improving search capabilties.
+The [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) allows you to display your testimonial profiles beautifully on your website. 
 
-= Gutenberg Compatible =
-Have you updated to the new WordPress Gutenberg editor? We've got you covered! [The LSX Theme](https://lsx.lsdev.biz/) and all of its extensions have been optimised to work perfectly with the new Gutenberg update. 
+== Works with the LSX Theme ==
+Our  [theme](https://lsx.lsdev.biz/) works perfectly with the Team Extension, improving internal linking, website SEO and user experience! 
 
-= It's free, and always will be. =
-We’re firm believers in open source - that’s why we’re releasing the LSX Search plugin for free, forever.
+== Gutenberg Compatible Plugin ==
+Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Testimonials Plugin has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
 
-= Support =
-We offer premium support for this plugin. Premium support that can be purchased via [our website.](https://www.lsdev.biz/services/support/).
+== It's free, and always will be. ==
+We’re firm believers in open source - that’s why the [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) is free, and that won't change. We are constantly maintaining and updating our extension so you have the latest and greatest abilities on your LSX Theme powered site. 
 
-Looking for an example of the LSX Search Plugin? Check out our [LSX Search demo](https://lsx.lsdev.biz/extensions/testimonials/) for more information on available features.
+== LSX Testimonials Documentation ==
 
-== Installation ==
-To download and install the LSX Banners Extension, follow the steps below:
+We have created extensive documentation on all of the LSX Testimonials Plugin functionality. This means a hassle free installation and setup with no code requirements. Go to the [LSX Testimonials Documentation](https://lsx.lsdev.biz/documentation/lsx-testimonials/).
 
-1. Login to the backend of your WordPress website.
-2. Navigate to the “Plugins” dashboard item.
-3. Select “Add New” when on the plugins page.
-4. Search for “LSX Testimonials” in the plugin searchbar.
-5. Download and activate the plugin.
+== LSX Testimonials Help & Support ==
 
-== Frequently Asked Questions ==
+We offer premium support for this plugin. Premium support that can be purchased [via our website](https://www.lsdev.biz/services/support/).
 
-= Where can I find LSX Testimonial plugin documentation and user guides? =
-For help setting up and configuring the Testimonial plugin please refer to our [user guide](https://www.lsdev.biz/documentation/lsx/testimonials-extension/)
+If you are experiencing issues with the LSX Testimonials Plugin & have experience with Github, please log any bug issues you are having on the [LSX Testimonials Github Issues](https://github.com/lightspeeddevelopment/lsx-testimonials/issues/) page.
 
-= Will the LSX Customizer plugin work with my theme? =
-Not unless you are making use of the [The LSX theme!](https://lsx.lsdev.biz/) 
+== Contributing to the LSX Testimonials Plugin ==
 
-All of the LSX Extensions were built for the LSX theme. Be sure to have it installed and activated for this extension to function. 
-
-= Where can I report bugs or contribute to the project? =
-Bugs can be reported either in our support forum or preferably on the [LSX Testimonial GitHub repository](https://github.com/lightspeeddevelopment/lsx/issues).
-
-= The LSX Testimonial plugin is awesome! Can I contribute? =
-Yes you can! Join in on our [GitHub repository](https://github.com/lightspeeddevelopment/lsx-testimonials) :)
+If you're a developer who's spotted a bug issue and have a fix, or simply have functionality you think would extend our core theme, we are always happy to accept your contribution! Visit the [LSX Testimonials Plugin on Github](https://github.com/lightspeeddevelopment/lsx-testimonials/) and submit a Pull Request with your updates.
 
 == Screenshots ==
 
 1. The Settings Panel
-
-== Changelog ==

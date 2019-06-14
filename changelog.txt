@@ -1,8 +1,11 @@
 ## Changelog
 
-### 1.1.6
+### 1.1.6 - 14th June 2019
 * Dev - Changed the JS to trigger on page load and not right away.
 * Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options
+* Dev - Updating packages and making sure the border color for the block quote is grey.
+* Fix - Services will appear only if service plugin is active.
+* Dev - Updating NPM Dependencies and package files.
 
 ### 1.1.5
 * Dev - Remove the inline attributes for the "data-slick" attribute and marged them with the JS code.

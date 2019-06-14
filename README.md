@@ -1,128 +1,40 @@
-# LSX Testimonials
+<p align="center"><a target="_blank" href="https://lsx.lsdev.biz/"><img width="100px;" src="https://lsx.lsdev.biz/wp-content/uploads/2019/03/Testimonials.svg" alt="LSX Testimonials Extension"></a>
+</p>
+<h1 align="center">LSX Testimonials</h1>
 
-The LSX Testimonial adds a “Testimonials” post type to your LSX theme run website. This allows you to store all of your testimonials/reviews and display them in an attractive slider or grid. 
+<p align="center">
+    <a href="http://gulpjs.com/"><img src="https://img.shields.io/badge/built%20with-gulp.js-green.svg" alt="Built with gulp.js"></a> 
+   <a href="https://lsx.lsdev.biz/"><img src="https://lsx.lsdev.biz/wp-content/uploads/2019/06/Designed-for-LSX-Theme-blue.png" alt="Made for LSX"></a>
+   <a href="https://travis-ci.org/lightspeeddevelopment/lsx-testimonials/"><img src="https://travis-ci.org/lightspeeddevelopment/lsx-testimonials.svg?branch=master" alt="Build Status"></a>
+</p>
 
-## Description
+The [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) adds a section to your website for storing your testimonial information. 
 
-The most convincing way to gain credibility for your business is to have users share their experience of your product or service. The [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) allows you to collect and display these Testimonials easily on your website.
+Create a profile per testimonial, display them in an attractive carousel and house them all in an archive for all your users to view. 
+
+People like to see a face behind a business, it gives you a more personal, approachable relationship with your users. 
+
+The [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) allows you to display your testimonial profiles beautifully on your website. 
 
 ## Works with the LSX Theme
-Our [theme](https://lsx.lsdev.biz/) works perfectly with the LSX Search, improving search capabilties.
+Our  [theme](https://lsx.lsdev.biz/) works perfectly with the Team Extension, improving internal linking, website SEO and user experience! 
 
-## Gutenberg Compatible
-Have you updated to the new WordPress Gutenberg editor? We've got you covered! [The LSX Theme](https://lsx.lsdev.biz/) and all of its extensions have been optimised to work perfectly with the new Gutenberg update. 
+## Gutenberg Compatible Plugin
+Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Testimonials Plugin has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
 
 ## It's free, and always will be.
-We’re firm believers in open source - that’s why we’re releasing the LSX Search plugin for free, forever.
+We’re firm believers in open source - that’s why the [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) is free, and that won't change. We are constantly maintaining and updating our extension so you have the latest and greatest abilities on your LSX Theme powered site. 
 
-## Support
-We offer premium support for this plugin. Premium support that can be purchased via [our website.](https://www.lsdev.biz/services/support/).
+## LSX Testimonials Documentation
 
-Looking for an example of the LSX Search Plugin? Check out our [LSX Search demo](https://lsx.lsdev.biz/extensions/testimonials/) for more information on available features.
+We have created extensive documentation on all of the LSX Testimonials Plugin functionality. This means a hassle free installation and setup with no code requirements. Go to the [LSX Testimonials Documentation](https://lsx.lsdev.biz/documentation/lsx-testimonials/).
 
-## Installation
-To download and install the LSX Banners Extension, follow the steps below:
+## LSX Testimonials Help & Support
 
-1. Login to the backend of your WordPress website.
-2. Navigate to the “Plugins” dashboard item.
-3. Select “Add New” when on the plugins page.
-4. Search for “LSX Testimonials” in the plugin searchbar.
-5. Download and activate the plugin.
+We offer premium support for this plugin. Premium support that can be purchased [via our website](https://www.lsdev.biz/services/support/).
 
-## Frequently Asked Questions
+If you are experiencing issues with the LSX Testimonials Plugin & have experience with Github, please log any bug issues you are having on the [LSX Testimonials Github Issues](https://github.com/lightspeeddevelopment/lsx-testimonials/issues/) page.
 
-### Where can I find LSX Testimonial plugin documentation and user guides?
-For help setting up and configuring the Testimonial plugin please refer to our [user guide](https://www.lsdev.biz/documentation/lsx/testimonials-extension/)
+## Contributing to the LSX Testimonials Plugin
 
-### Will the LSX Customizer plugin work with my theme?
-Not unless you are making use of the [The LSX theme!](https://lsx.lsdev.biz/) 
-
-All of the LSX Extensions were built for the LSX theme. Be sure to have it installed and activated for this extension to function. 
-
-### Where can I report bugs or contribute to the project?
-Bugs can be reported either in our support forum or preferably on the [LSX Testimonial GitHub repository](https://github.com/lightspeeddevelopment/lsx/issues).
-
-### The LSX Testimonial plugin is awesome! Can I contribute?
-Yes you can! Join in on our [GitHub repository](https://github.com/lightspeeddevelopment/lsx-testimonials) :)
-
-
-## Shortcode:
-
-Insert the shortcode `[testimonials]` into any page to display all testimonials.
-
-### Optional shortcode parameters:
-
-### Columns
- Set the number of columns to Display
- 
- - options: 1, 2, 3, 4
- - default: 1
- 
- For Example `[testimonials columns=4]`
-
-### Orderby
- Choose how the testimonails should be ordered
- 
- - options: none, ID, name, date, rand (or any of the orderby options accepted by WP_Query - http://codex.wordpress.org/Class_Reference/WP_Query)
- - default: name
- 
- For Example `[testimonials orderby=rand]`
-
-### Order
- Whether to display testimonials in Ascending or Descending order (Based on the Orderby Parameter)
- 
- - options: ASC, DESC
- - default: ASC
- 
- For Example `[testimonials order='DESC']`
-
-### Limit
-
- Set the Maximum number of testimonials to be returned
- 
- For Example `[testimonials limit=4]`
-
-### Include
- Specify which testimonials to include by entering a comma seperated list of IDs. (This overrides the order and limit parameters; testimonials will display in the order in which the IDs are entered)
- 
- For Example `[testimonials include='7, 38, 19']`
-
-### Size
- Set the featured image or Gravatar size to display on each testimonial. Accepts numbers only, exclude the 'px'.
- 
- - default: 150
- 
- For Example `[testimonials size=200]`
-
-### Responsive
- Choose whether the images should resize according to the size of the viewport (enabled by default)
- 
- - default: true
- 
- For Example `[testimonials responsive=false]`
-
-### Show_image
- Choose whether the images should display (enabled by default)
- 
- - default: true
- 
- For Example `[testimonials show_image=false]`
-
-## Function Call:
-
-The testimonials function can be called directly in your theme templates. It accepts an array of the same parameters used in the shortcode.
-
-eg:
-```
-<?php
-	if ( class_exists( 'LSX_Testimonials' ) ) {
-        lsx_testimonials( array(                                        
-            'size' => 150,
-            'responsive' => false,
-            'columns' => 3,
-            'limit' => 6,
-            'carousel' => true,
-        ) );
-    };
-?>
-```
+If you're a developer who's spotted a bug issue and have a fix, or simply have functionality you think would extend our core theme, we are always happy to accept your contribution! Visit the [LSX Testimonials Plugin on Github](https://github.com/lightspeeddevelopment/lsx-testimonials/) and submit a Pull Request with your updates.
