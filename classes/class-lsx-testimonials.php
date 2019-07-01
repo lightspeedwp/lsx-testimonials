@@ -49,7 +49,8 @@ class LSX_Testimonials {
 			$thumb_size = $size;
 		}
 
-		$thumbnail = '';
+		$thumbnail  = '';
+		$responsive = '';
 
 		if ( ! empty( get_the_post_thumbnail( $post_id ) ) ) {
 			$thumbnail = get_the_post_thumbnail(
