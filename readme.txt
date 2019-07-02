@@ -1,7 +1,7 @@
 === LSX Testimonials ===
 Contributors: feedmymedia
 Donate link: https://donate.lsdev.biz/
-Tags: lsx, Gutenberg, testimonials, post type, carousel
+Tags: lsx, gutenberg, testimonials, post type, carousel
 Requires at least: 4.9
 Tested up to: 5.2.2
 Requires PHP: 7.0
