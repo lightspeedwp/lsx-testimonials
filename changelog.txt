@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.1.7 - 4th July 2019
+* Fix - If the excerpt does not have content it will show a trim version of the content as exceprt.
+
 ### 1.1.6 - 14th June 2019
 * Dev - Changed the JS to trigger on page load and not right away.
 * Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options
