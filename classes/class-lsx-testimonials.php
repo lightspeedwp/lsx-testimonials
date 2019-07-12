@@ -201,8 +201,8 @@ class LSX_Testimonials {
 					if ( ! has_excerpt() ) {
 
 						$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue reading', 'lsx' ) . '</a></p>';
-						$content      = wp_trim_words( get_the_content(), 20);
-						$content = '<p>' . $content . '</p>' . $excerpt_more;
+						$content      = wp_trim_words( get_the_content(), 20 );
+						$content      = '<p>' . $content . '</p>' . $excerpt_more;
 					} else {
 						$content = apply_filters( 'the_excerpt', get_the_excerpt() );
 					}
