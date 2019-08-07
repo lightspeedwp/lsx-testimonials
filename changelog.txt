@@ -1,7 +1,10 @@
 ## Changelog
 
-### 1.1.7 - 4th July 2019
-* Fix - If the excerpt does not have content it will show a trim version of the content as exceprt.
+### 1.1.7 - 6 August 2019
+* Fix - If the excerpt does not have content it will show a trim version of the content as excerpt.
+* Fix - Changing enqueuing scripts priority.
+* Fix - Travis and best practices fixes.
+
 
 ### 1.1.6 - 14th June 2019
 * Dev - Changed the JS to trigger on page load and not right away.
