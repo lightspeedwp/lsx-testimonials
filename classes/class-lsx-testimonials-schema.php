@@ -16,7 +16,7 @@ class LSX_Schema_Review extends LSX_Schema_Graph_Piece {
 	 * @param \WPSEO_Schema_Context $context A value object with context variables.
 	 */
 	public function __construct( WPSEO_Schema_Context $context ) {
-		$this->post_type = 'review';
+		$this->post_type = 'testimonial';
 		parent::__construct( $context );
 	}
 	/**
@@ -26,8 +26,8 @@ class LSX_Schema_Review extends LSX_Schema_Graph_Piece {
 	 */
 	public function generate() {
 		$post                = get_post( $this->context->id );
-		$review_author       = get_post_meta( $post->ID, 'reviewer_name', true );
-		$review_email        = get_post_meta( $post->ID, 'reviewer_email', true );
+		$review_author       = $post->post_title;
+		$review_email        = get_post_meta( $post->ID, 'lsx_testimonial_email_gravatar', true );
 		$description         = wp_strip_all_tags( get_the_content() );
 		$comment_count       = get_comment_count( $this->context->id );
 		$data          = array(
@@ -35,7 +35,7 @@ class LSX_Schema_Review extends LSX_Schema_Graph_Piece {
 			'@id'              => $this->context->canonical . '#review',
 			'author'           => array(
 				'@type' => 'Person',
-				'@id'   => Schema_Utils::get_author_schema_id( $review_author, $review_email, $this->context ),
+				'@id'   => LSX_Schema_Utils::get_author_schema_id( $review_author, $review_email, $this->context ),
 				'name'  => $review_author,
 				'email' => $review_email,
 			),
@@ -49,11 +49,10 @@ class LSX_Schema_Review extends LSX_Schema_Graph_Piece {
 			'reviewBody'       => $description,
 		);
 		if ( $this->context->site_represents_reference ) {
-			$data['publisher'] = $this->context->site_represents_reference;
+			$data['publisher']    = $this->context->site_represents_reference;
+			$data['itemReviewed'] = $this->context->site_represents_reference;
 		}
-		$data = Schema_Utils::add_image( $data, $this->context );
-		$data = $this->add_taxonomy_terms( $data, 'keywords', 'post_tag' );
-		$data = $this->add_taxonomy_terms( $data, 'reviewSection', 'category' );
+		$data = LSX_Schema_Utils::add_image( $data, $this->context );
 		return $data;
 	}
 }
