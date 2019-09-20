@@ -36,12 +36,15 @@ class LSX_Testimonials_Frontend {
 			), 15, 2 );
 		}
 
+		add_filter( 'wpseo_schema_graph_pieces', array( $this, 'add_graph_pieces' ), 11, 2 );
+
 		add_filter( 'lsx_fonts_css', array( $this, 'customizer_fonts_handler' ), 15 );
 		add_filter( 'lsx_banner_title', array( $this, 'lsx_banner_archive_title' ), 15 );
 
 		add_filter( 'excerpt_more_p', array( $this, 'change_excerpt_more' ) );
 		add_filter( 'excerpt_length', array( $this, 'change_excerpt_length' ) );
 		add_filter( 'excerpt_strip_tags', array( $this, 'change_excerpt_strip_tags' ) );
+
 	}
 
 	public function enqueue_scripts() {
@@ -207,6 +210,17 @@ class LSX_Testimonials_Frontend {
 
 		return $allowed_tags;
 	}
+
+	/**
+	 * Adds Pieces
+	 */
+	public function add_graph_pieces( $pieces, $context ) {
+		// Scheme Class.
+		require_once LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-schema.php';
+		$pieces[] = new \LSX_Schema_Review( $context );
+		return $pieces;
+	}
+
 }
 
 $lsx_testimonials_frontend = new LSX_Testimonials_Frontend();
