@@ -9,7 +9,7 @@
  *
  * @since 10.2
  */
-class LSX_Schema_Review extends LSX_Schema_Graph_Piece {
+class LSX_Testimonial_Schema extends LSX_Schema_Graph_Piece {
 	/**
 	 * Constructor.
 	 *
