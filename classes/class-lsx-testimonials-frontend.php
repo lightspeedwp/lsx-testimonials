@@ -218,7 +218,7 @@ class LSX_Testimonials_Frontend {
 		// Scheme Class.
 		if ( class_exists( 'LSX_Schema_Graph_Piece' ) ) {
 			require_once LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-schema.php';
-			$pieces[] = new \LSX_Schema_Review( $context );
+			$pieces[] = new \LSX_Testimonials_Schema( $context );
 		}
 		return $pieces;
 	}
