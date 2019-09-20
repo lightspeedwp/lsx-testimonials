@@ -1,8 +1,9 @@
 ## Changelog
 
 ### 1.1.8 - In development
-# Dev - Adding the .gitattributes file to remove unnecessary files from the WordPress version.
+* Dev - Adding the .gitattributes file to remove unnecessary files from the WordPress version.
 * Dev - Added in lazyloading for the sliders.
+* Dev - Added in the Review Schema integrated with Yoast WordPress SEO
 
 ### 1.1.7 - 6 August 2019
 * Fix - If the excerpt does not have content it will show a trim version of the content as excerpt.
