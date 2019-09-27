@@ -1,6 +1,6 @@
 ## Changelog
 
-### 1.1.8 - In development
+### 1.1.8 - September 27
 * Dev - Adding the .gitattributes file to remove unnecessary files from the WordPress version.
 * Dev - Added in lazyloading for the sliders.
 * Dev - Added in the Review Schema integrated with Yoast WordPress SEO
