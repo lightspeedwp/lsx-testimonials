@@ -162,6 +162,7 @@ class LSX_Testimonials_Widget extends WP_Widget {
 			'button_text' => '',
 			'carousel'    => 1,
 			'featured'    => 0,
+			'col_enabled' => 0,
 		);
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
@@ -180,7 +181,8 @@ class LSX_Testimonials_Widget extends WP_Widget {
 		$show_image  = esc_attr( $instance['show_image'] );
 		$button_text = esc_attr( $instance['button_text'] );
 		$carousel    = esc_attr( $instance['carousel'] );
-		$featured    = esc_attr( $instance['featured'] ); ?>
+		$featured    = esc_attr( $instance['featured'] );
+		$col_enabled = esc_attr( $instance['col_enabled'] ); ?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'lsx-testimonials' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
