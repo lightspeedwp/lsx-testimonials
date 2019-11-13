@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.2.1 - 13 November 2019
+* Fix - Fixing the ` Undefined variable: col_enabled` error.
+
 ### 1.2.0 - 1 October 2019
 # Dev - Adding the .gitattributes file to remove unnecessary files from the WordPress version.
 * Dev - Added in lazyloading for the sliders.
