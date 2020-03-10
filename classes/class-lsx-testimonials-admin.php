@@ -27,6 +27,7 @@ class LSX_Testimonials_Admin {
 		}
 
 		add_action( 'init', array( $this, 'post_type_setup' ) );
+		add_action( 'init', array( $this, 'taxonomy_setup' ) );
 		add_filter( 'cmb_meta_boxes', array( $this, 'field_setup' ) );
 		add_action( 'cmb_save_custom', array( $this, 'post_relations' ), 3, 20 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'assets' ) );
@@ -76,9 +77,44 @@ class LSX_Testimonials_Admin {
 				'excerpt',
 				'thumbnail',
 			),
+			'show_in_rest'          => true,
+			'rest_base'             => 'testimonial',
+			'rest_controller_class' => 'WP_REST_Posts_Controller',
 		);
 
 		register_post_type( 'testimonial', $args );
+	}
+
+	public function taxonomy_setup() {
+		$labels = array(
+			'name'              => esc_html_x( 'Tags', 'taxonomy general name', 'lsx-testimonials' ),
+			'singular_name'     => esc_html_x( 'Tag', 'taxonomy singular name', 'lsx-testimonials' ),
+			'search_items'      => esc_html__( 'Search Tags', 'lsx-testimonials' ),
+			'all_items'         => esc_html__( 'All Tags', 'lsx-testimonials' ),
+			'parent_item'       => esc_html__( 'Parent Tag', 'lsx-testimonials' ),
+			'parent_item_colon' => esc_html__( 'Parent Tag:', 'lsx-testimonials' ),
+			'edit_item'         => esc_html__( 'Edit Tag', 'lsx-testimonials' ),
+			'update_item'       => esc_html__( 'Update Tag', 'lsx-testimonials' ),
+			'add_new_item'      => esc_html__( 'Add New Tag', 'lsx-testimonials' ),
+			'new_item_name'     => esc_html__( 'New Tag Name', 'lsx-testimonials' ),
+			'menu_name'         => esc_html__( 'Tags', 'lsx-testimonials' ),
+		);
+
+		$args = array(
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'query_var'         => true,
+			'rewrite'           => array(
+				'slug' => 'testimonial-tag',
+			),
+			'show_in_rest'          => true,
+			'rest_base'             => 'testimonialtag',
+			'rest_controller_class' => 'WP_REST_Terms_Controller',
+		);
+
+		register_taxonomy( 'testimonial_tag', array( 'testimonial' ), $args );
 	}
 
 	public function field_setup( $meta_boxes ) {

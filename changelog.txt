@@ -1,5 +1,9 @@
 ## Changelog
 
+= 1.2.3 = In Development
+* Dev - Adding support for the WordPress REST API.
+* Dev - Adding 'Tag' taxonomy.
+
 ### 1.2.2 - 19 December 2019
 # Dev - General testing to ensure compatibility with latest WordPress version (5.3).
 # Dev - Checking compatibility with LSX 2.6 release.
