@@ -3,9 +3,9 @@ Contributors: feedmymedia
 Donate link: https://donate.lsdev.biz/
 Tags: lsx, gutenberg, testimonials, post type, carousel
 Requires at least: 5.1.1
-Tested up to: 5.3.2
+Tested up to: 5.4
 Requires PHP: 7.0
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -23,7 +23,7 @@ Our  [theme](https://lsx.lsdev.biz/) works perfectly with the Testimonials Exten
 
 == Gutenberg Compatible Plugin ==
 
-Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Testimonials Plugin has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
+Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Testimonials Plugin has been optimized for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
 
 == It's free, and always will be. ==
 

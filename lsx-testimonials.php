@@ -3,7 +3,7 @@
  * Plugin Name: LSX Testimonials
  * Plugin URI:  https://lsx.lsdev.biz/extensions/testimonials/
  * Description: The LSX Testimonials extension adds the "Testimonials" post type.
- * Version:     1.2.2
+ * Version:     1.2.3
  * Author:      LightSpeed
  * Author URI:  https://www.lsdev.biz/
  * License:     GPL3
@@ -20,25 +20,25 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'LSX_TESTIMONIALS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'LSX_TESTIMONIALS_CORE', __FILE__ );
 define( 'LSX_TESTIMONIALS_URL', plugin_dir_url( __FILE__ ) );
-define( 'LSX_TESTIMONIALS_VER', '1.2.2' );
+define( 'LSX_TESTIMONIALS_VER', '1.2.3' );
 
 
 /* ======================= Below is the Plugin Class init ========================= */
 
 // Post Type and Custom Fields.
-require_once( LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-admin.php' );
+require_once LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-admin.php';
 
 // Frontend scripts and styles.
-require_once( LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-frontend.php' );
+require_once LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-frontend.php';
 
 // Shortcode and Template Tag.
-require_once( LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials.php' );
+require_once LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials.php';
 
 // Widget.
-require_once( LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-widget.php' );
+require_once LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-widget.php';
 
 // Template Tag and functions.
-require_once( LSX_TESTIMONIALS_PATH . '/includes/functions.php' );
+require_once LSX_TESTIMONIALS_PATH . '/includes/functions.php';
 
 // Post reorder.
-require_once( LSX_TESTIMONIALS_PATH . '/includes/class-lsx-testimonials-scpo-engine.php' );
+require_once LSX_TESTIMONIALS_PATH . '/includes/class-lsx-testimonials-scpo-engine.php';
