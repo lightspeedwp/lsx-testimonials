@@ -1,5 +1,5 @@
 === LSX Testimonials ===
-Contributors: feedmymedia
+Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, virginialsdev, deon80, jaab1985, jacquesvdh, ignusvermaak, garthlsdev
 Donate link: https://donate.lsdev.biz/
 Tags: lsx, gutenberg, testimonials, post type, carousel
 Requires at least: 5.1.1
