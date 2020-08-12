@@ -70,9 +70,9 @@ class LSX_Testimonials {
 
 		if ( empty( $thumbnail ) ) {
 			if ( $this->options['display'] && ! empty( $this->options['display']['testimonials_placeholder'] ) ) {
-				$thumbnail = '<img class="' . $responsive . '" src="' . $this->options['display']['testimonials_placeholder'] . '" width="' . $size . '" alt="placeholder" />';
+				$thumbnail = '<img loading="lazy" class="' . $responsive . '" src="' . $this->options['display']['testimonials_placeholder'] . '" width="' . $size . '" alt="placeholder" />';
 			} else {
-				$thumbnail = '<img class="' . $responsive . '" src="https://www.gravatar.com/avatar/none?d=mm&s=' . $size . '" width="' . $size . '" alt="placeholder" />';
+				$thumbnail = '<img loading="lazy" class="' . $responsive . '" src="https://www.gravatar.com/avatar/none?d=mm&s=' . $size . '" width="' . $size . '" alt="placeholder" />';
 			}
 		}
 
