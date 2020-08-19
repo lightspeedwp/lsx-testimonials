@@ -12,23 +12,14 @@
 class LSX_Testimonials_Admin {
 
 	public function __construct() {
-		if ( ! class_exists( 'CMB_Meta_Box' ) ) {
-			require_once( LSX_TESTIMONIALS_PATH . '/vendor/Custom-Meta-Boxes/custom-meta-boxes.php' );
-		}
-
-		if ( function_exists( 'tour_operator' ) ) {
-			$this->options = get_option( '_lsx-to_settings', false );
-		} else {
-			$this->options = get_option( '_lsx_settings', false );
-
-			if ( false === $this->options ) {
-				$this->options = get_option( '_lsx_lsx-settings', false );
-			}
-		}
+		$this->load_classes();
 
 		add_action( 'init', array( $this, 'post_type_setup' ) );
 		add_action( 'init', array( $this, 'taxonomy_setup' ) );
-		add_filter( 'cmb_meta_boxes', array( $this, 'field_setup' ) );
+		add_filter( 'cmb2_admin_init', array( $this, 'field_setup' ) );
+		add_filter( 'cmb2_admin_init', array( $this, 'testimonials_services_metaboxes' ) );
+		add_filter( 'cmb2_admin_init', array( $this, 'testimonials_testimonials_metaboxes' ) );
+		add_filter( 'cmb2_admin_init', array( $this, 'testimonials_team_metaboxes' ) );
 		add_action( 'cmb_save_custom', array( $this, 'post_relations' ), 3, 20 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'assets' ) );
 
@@ -39,6 +30,20 @@ class LSX_Testimonials_Admin {
 		add_filter( 'enter_title_here', array( $this, 'change_title_text' ) );
 	}
 
+	/**
+	 * Loads the admin subclasses
+	 */
+	private function load_classes() {
+		require_once LSX_TESTIMONIALS_PATH . 'classes/admin/class-settings.php';
+		$this->settings = \lsx\testimonials\classes\admin\Settings::get_instance();
+
+		require_once LSX_TESTIMONIALS_PATH . 'classes/admin/class-settings-theme.php';
+		$this->settings_theme = \lsx\testimonials\classes\admin\Settings_Theme::get_instance();
+	}
+
+	/**
+	 * Register the Testimonial and Product Tag post type
+	 */
 	public function post_type_setup() {
 		$labels = array(
 			'name'               => esc_html_x( 'Testimonials', 'post type general name', 'lsx-testimonials' ),
@@ -57,21 +62,21 @@ class LSX_Testimonials_Admin {
 		);
 
 		$args = array(
-			'labels'             => $labels,
-			'public'             => true,
-			'publicly_queryable' => true,
-			'show_ui'            => true,
-			'show_in_menu'       => true,
-			'menu_icon'          => 'dashicons-editor-quote',
-			'query_var'          => true,
-			'rewrite'            => array(
+			'labels'                => $labels,
+			'public'                => true,
+			'publicly_queryable'    => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_icon'             => 'dashicons-editor-quote',
+			'query_var'             => true,
+			'rewrite'               => array(
 				'slug' => 'testimonials',
 			),
-			'capability_type'    => 'post',
-			'has_archive'        => 'testimonials',
-			'hierarchical'       => false,
-			'menu_position'      => null,
-			'supports'           => array(
+			'capability_type'       => 'post',
+			'has_archive'           => 'testimonials',
+			'hierarchical'          => false,
+			'menu_position'         => null,
+			'supports'              => array(
 				'title',
 				'editor',
 				'excerpt',
@@ -85,6 +90,9 @@ class LSX_Testimonials_Admin {
 		register_post_type( 'testimonial', $args );
 	}
 
+	/**
+	 * Register the Group taxonomy
+	 */
 	public function taxonomy_setup() {
 		$labels = array(
 			'name'              => esc_html_x( 'Tags', 'taxonomy general name', 'lsx-testimonials' ),
@@ -101,12 +109,12 @@ class LSX_Testimonials_Admin {
 		);
 
 		$args = array(
-			'hierarchical'      => true,
-			'labels'            => $labels,
-			'show_ui'           => true,
-			'show_admin_column' => true,
-			'query_var'         => true,
-			'rewrite'           => array(
+			'hierarchical'          => true,
+			'labels'                => $labels,
+			'show_ui'               => true,
+			'show_admin_column'     => true,
+			'query_var'             => true,
+			'rewrite'               => array(
 				'slug' => 'testimonial-tag',
 			),
 			'show_in_rest'          => true,
@@ -117,99 +125,175 @@ class LSX_Testimonials_Admin {
 		register_taxonomy( 'testimonial_tag', array( 'testimonial' ), $args );
 	}
 
-	public function field_setup( $meta_boxes ) {
+	/**
+	 * Add metabox with custom fields to the Testimonial post type
+	 */
+	public function field_setup() {
 		$prefix = 'lsx_testimonial_';
 
-		$fields = array(
+		$cmb = new_cmb2_box(
 			array(
-				'name' => esc_html__( 'Featured:', 'lsx-testimonials' ),
-				'id'   => $prefix . 'featured',
-				'type' => 'checkbox',
-			),
+				'id'           => $prefix . '_testimonial',
+				'title'        => __( 'General', 'lsx-testimonials' ),
+				'object_types' => 'testimonial',
+				'context'      => 'normal',
+				'priority'     => 'low',
+				'show_names'   => true,
+			)
+		);
+
+		$cmb->add_field(
 			array(
-				'name' => esc_html__( 'Gravatar Email Address:', 'lsx-testimonials' ),
-				'desc' => esc_html__( 'Enter the email address of this client to use a gravatar image', 'lsx-testimonials' ),
-				'id'   => $prefix . 'email_gravatar',
-				'type' => 'text',
-			),
+				'name'         => esc_html__( 'Featured:', 'lsx-testimonials' ),
+				'id'           => $prefix . 'featured',
+				'type'         => 'checkbox',
+				'value'        => 1,
+				'default'      => 0,
+				'show_in_rest' => true,
+			)
+		);
+
+		$cmb->add_field(
 			array(
-				'name' => esc_html__( 'Company and Job title:', 'lsx-testimonials' ),
-				'desc' => esc_html__( 'Enter the company and job title of the person giving the testimonial eg. CEO of ABC enterprises', 'lsx-testimonials' ),
-				'id'   => $prefix . 'byline',
-				'type' => 'text',
-			),
+				'name'         => esc_html__( 'Gravatar Email Address:', 'lsx-testimonials' ),
+				'desc'         => esc_html__( 'Enter the email address of this client to use a gravatar image', 'lsx-testimonials' ),
+				'id'           => $prefix . 'email_gravatar',
+				'type'         => 'text',
+				'show_in_rest' => true,
+			)
+		);
+
+		$cmb->add_field(
 			array(
-				'name' => esc_html__( 'URL:', 'lsx-testimonials' ),
-				'desc' => esc_html__( 'Link to the client\'s website - This adds a link to the "Company and Job title" field above', 'lsx-testimonials' ),
-				'id'   => $prefix . 'url',
-				'type' => 'text_url',
-			),
+				'name'         => esc_html__( 'URL:', 'lsx-testimonials' ),
+				'desc'         => esc_html__( 'Link to the client\'s website - This adds a link to the "Company and Job title" field above', 'lsx-testimonials' ),
+				'id'           => $prefix . 'url',
+				'type'         => 'text_url',
+				'show_in_rest' => true,
+			)
+		);
+
+		$cmb->add_field(
+			array(
+				'name'         => esc_html__( 'URL for the finished project:', 'lsx-projects' ),
+				'id'           => $prefix . 'url',
+				'type'         => 'text',
+				'show_in_rest' => true,
+			)
+		);
+
+	}
+
+	/**
+	 * Testimonial Services Metaboxes.
+	 */
+	public function testimonials_services_metaboxes() {
+		$prefix = 'lsx_testimonial_';
+
+		$cmb = new_cmb2_box(
+			array(
+				'id'           => $prefix . '_testimonial',
+				'object_types' => 'testimonials',
+				'context'      => 'normal',
+				'priority'     => 'low',
+				'show_names'   => true,
+			)
+		);
+
+		$cmb->add_field(
+			array(
+				'name'         => esc_html__( 'Services:', 'lsx-testimonials' ),
+				'id'           => 'service_to_testimonial',
+				'type'         => 'post_search_ajax',
+				'show_in_rest' => true,
+				'limit'        => 15,
+				'sortable'     => true,
+				'query_args'   => array(
+					'post_type'      => array( 'page' ),
+					'post_status'    => array( 'publish' ),
+					'nopagin'        => true,
+					'posts_per_page' => '50',
+					'orderby'        => 'title',
+					'order'          => 'ASC',
+				),
+			)
+		);
+	}
+
+	/**
+	 * Testimonial Team Metaboxes.
+	 */
+	public function testimonials_team_metaboxes() {
+		$prefix = 'lsx_testimonial_';
+
+		$cmb = new_cmb2_box(
+			array(
+				'id'           => $prefix . '_testimonial',
+				'object_types' => 'testimonial',
+				'context'      => 'normal',
+				'priority'     => 'low',
+				'show_names'   => true,
+			)
+		);
+
+		if ( class_exists( 'LSX_Team' ) ) {
+			$cmb->add_field(
+				array(
+					'name'         => esc_html__( 'Team Member:', 'lsx-testimonials' ),
+					'id'           => 'team_to_testimonial',
+					'type'         => 'post_search_ajax',
+					'show_in_rest' => true,
+					'limit'        => 15,
+					'sortable'     => true,
+					'query_args'   => array(
+						'post_type'      => array( 'team' ),
+						'post_status'    => array( 'publish' ),
+						'nopagin'        => true,
+						'posts_per_page' => '50',
+						'orderby'        => 'title',
+						'order'          => 'ASC',
+					),
+				)
+			);
+		}
+	}
+
+	/**
+	 * Testimonial Project Metaboxes.
+	 */
+	public function testimonials_woocommerce_metaboxes() {
+		$prefix = 'lsx_testimonial_';
+
+		$cmb = new_cmb2_box(
+			array(
+				'id'           => $prefix . '_testimonial',
+				'object_types' => 'testimonials',
+				'context'      => 'normal',
+				'priority'     => 'low',
+				'show_names'   => true,
+			)
 		);
 
 		if ( class_exists( 'LSX_Projects' ) ) {
-			$fields[] = array(
-				'name' => esc_html__( 'Projects:', 'lsx-testimonials' ),
-				'id' => 'project_to_testimonial',
-				'type' => 'post_select',
-				'use_ajax' => false,
-				'query' => array(
-					'post_type' => 'project',
-					'nopagin' => true,
-					'posts_per_page' => '50',
-					'orderby' => 'title',
-					'order' => 'ASC',
-				),
-				'repeatable' => true,
-				'allow_none' => true,
-				'cols' => 12,
+			$cmb->add_field(
+				array(
+					'name'         => esc_html__( 'Projects:', 'lsx-testimonials' ),
+					'id'           => 'project_to_testimonial',
+					'type'         => 'post_search_ajax',
+					'show_in_rest' => true,
+					'limit'        => 15,
+					'sortable'     => true,
+					'query_args'   => array(
+						'post_type'      => array( 'product' ),
+						'post_status'    => array( 'publish' ),
+						'nopagin'        => true,
+						'posts_per_page' => '50',
+						'orderby'        => 'title',
+						'order'          => 'ASC',
+					),
+				)
 			);
 		}
-
-		if ( class_exists( 'LSX_Services' ) ) {
-			$fields[] = array(
-				'name' => esc_html__( 'Services:', 'lsx-testimonials' ),
-				'id' => 'service_to_testimonial',
-				'type' => 'post_select',
-				'use_ajax' => false,
-				'query' => array(
-					'post_type' => 'service',
-					'nopagin' => true,
-					'posts_per_page' => '50',
-					'orderby' => 'title',
-					'order' => 'ASC',
-				),
-				'repeatable' => true,
-				'allow_none' => true,
-				'cols' => 12,
-			);
-		}
-
-		if ( class_exists( 'LSX_Team' ) ) {
-			$fields[] = array(
-				'name' => esc_html__( 'Team Member:', 'lsx-testimonials' ),
-				'id' => 'team_to_testimonial',
-				'type' => 'post_select',
-				'use_ajax' => false,
-				'query' => array(
-					'post_type' => 'team',
-					'nopagin' => true,
-					'posts_per_page' => '50',
-					'orderby' => 'title',
-					'order' => 'ASC',
-				),
-				'repeatable' => true,
-				'allow_none' => true,
-				'cols' => 12,
-			);
-		}
-
-		$meta_boxes[] = array(
-			'title'  => esc_html__( 'Testimonial Details', 'lsx-testimonials' ),
-			'pages'  => 'testimonial',
-			'fields' => $fields,
-		);
-
-		return $meta_boxes;
 	}
 
 	/**
