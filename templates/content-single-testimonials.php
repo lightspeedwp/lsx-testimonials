@@ -23,15 +23,15 @@
 	$tab_project['title'] = esc_html__( 'Projects', 'lsx-testimonials' );
 	$tab_project['posts'] = get_post_meta( get_the_ID(), 'project_to_testimonial', false );
 
-	if ( ! empty( $tab_project['posts'] ) ) {
-		$post_ids = join( ',', $tab_project['posts'] );
+	if ( ! empty( $tab_project['posts'][0] ) ) {
+		$post_ids = join( ',', $tab_project['posts'][0] );
 		// $tab_project['shortcode'] = '[lsx_projects columns="3" include="' . $post_ids . '"]';
 
 		$tab_project['posts_html'] = '';
 
 		$args = array(
 			'post_type'              => 'project',
-			'post__in'               => $tab_project['posts'],
+			'post__in'               => $tab_project['posts'][0],
 			'orderby'                => 'post__in',
 			'no_found_rows'          => true,
 			'ignore_sticky_posts'    => 1,
@@ -58,20 +58,20 @@
 
 	// Tab Services
 
-	$tab_service['post_type'] = 'service';
+	$tab_service['post_type'] = 'page';
 	$tab_service['icon'] = 'wrench';
 	$tab_service['title'] = esc_html__( 'Services', 'lsx-testimonials' );
 	$tab_service['posts'] = get_post_meta( get_the_ID(), 'service_to_testimonial', false );
 
-	if ( ! empty( $tab_service['posts'] ) && is_plugin_active( 'lsx-services/lsx-services.php' ) ) {
-		$post_ids = join( ',', $tab_service['posts'] );
+	if ( ! empty( $tab_service['posts'][0] ) ) {
+		$post_ids = join( ',', $tab_service['posts'][0] );
 		// $tab_service['shortcode'] = '[lsx_services columns="3" include="' . $post_ids . '"]';
 
 		$tab_service['posts_html'] = '';
 
 		$args = array(
-			'post_type'              => 'service',
-			'post__in'               => $tab_service['posts'],
+			'post_type'              => 'page',
+			'post__in'               => $tab_service['posts'][0],
 			'orderby'                => 'post__in',
 			'no_found_rows'          => true,
 			'ignore_sticky_posts'    => 1,
@@ -103,15 +103,15 @@
 	$tab_team['title'] = esc_html__( 'Team', 'lsx-testimonials' );
 	$tab_team['posts'] = get_post_meta( get_the_ID(), 'team_to_testimonial', false );
 
-	if ( ! empty( $tab_team['posts'] ) ) {
-		$post_ids = join( ',', $tab_team['posts'] );
+	if ( ! empty( $tab_team['posts'][0] ) ) {
+		$post_ids = join( ',', $tab_team['posts'][0] );
 		// $tab_team['shortcode'] = '[lsx_team columns="4" include="' . $post_ids . '" show_social="false" show_desc="false" show_link="true"]';
 
 		$tab_team['posts_html'] = '';
 
 		$args = array(
 			'post_type'              => 'team',
-			'post__in'               => $tab_team['posts'],
+			'post__in'               => $tab_team['posts'][0],
 			'orderby'                => 'post__in',
 			'no_found_rows'          => true,
 			'ignore_sticky_posts'    => 1,

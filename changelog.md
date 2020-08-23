@@ -6,6 +6,10 @@
 
 - Added default WP 5.5 lazyloading.
 
+### Added
+- Changed UIX for CMB2.
+
+
 ## [[1.2.3]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.2.3) - 2020-03-30
 
 ### Added

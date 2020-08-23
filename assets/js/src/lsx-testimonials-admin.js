@@ -64,25 +64,4 @@ jQuery(document).ready(function() {
 		window.lsx_thumbnail_image_delete = true;
 	}
 
-	/*
-	 * Subtabs navigation
-	 */
-	if (undefined === window.lsx_thumbnail_subtabs_nav) {
-		jQuery(document).on('click', '.ui-tab-nav a', function(e) {
-			e.preventDefault();
-			e.stopPropagation();
-
-			var $this = jQuery(this);
-
-			jQuery('.ui-tab-nav a.active').removeClass('active');
-			$this.addClass('active');
-			jQuery('.ui-tab.active').removeClass('active');
-			$this.closest('.uix-field-wrapper').find($this.attr('href')).addClass('active');
-
-			return false;
-		});
-
-		window.lsx_thumbnail_subtabs_nav = true;
-	}
-
 });

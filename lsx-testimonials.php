@@ -25,6 +25,9 @@ define( 'LSX_TESTIMONIALS_VER', '1.2.3' );
 
 /* ======================= Below is the Plugin Class init ========================= */
 
+// Template Tag and functions.
+require_once LSX_TESTIMONIALS_PATH . '/includes/functions.php';
+
 // Post Type and Custom Fields.
 require_once LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-admin.php';
 
@@ -36,9 +39,6 @@ require_once LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials.php';
 
 // Widget.
 require_once LSX_TESTIMONIALS_PATH . '/classes/class-lsx-testimonials-widget.php';
-
-// Template Tag and functions.
-require_once LSX_TESTIMONIALS_PATH . '/includes/functions.php';
 
 // Post reorder.
 require_once LSX_TESTIMONIALS_PATH . '/includes/class-lsx-testimonials-scpo-engine.php';
