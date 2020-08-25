@@ -14,7 +14,7 @@
 
 	// Tabs
 
-	$tabs = array();
+	$tabs_output = array();
 
 	// Tab Projects
 
@@ -53,7 +53,7 @@
 			$tab_project['posts_html'] = join( ', ', $tab_project['posts_html'] );
 		}
 
-		$tabs[] = $tab_project;
+		$tabs_output[] = $tab_project;
 	}
 
 	// Tab Services
@@ -93,7 +93,7 @@
 			$tab_service['posts_html'] = join( ', ', $tab_service['posts_html'] );
 		}
 
-		$tabs[] = $tab_service;
+		$tabs_output[] = $tab_service;
 	}
 
 	// Tab Team
@@ -133,7 +133,7 @@
 			$tab_team['posts_html'] = join( ', ', $tab_team['posts_html'] );
 		}
 
-		$tabs[] = $tab_team;
+		$tabs_output[] = $tab_team;
 	}
 ?>
 
@@ -159,8 +159,8 @@
 		</small>
 	<?php endif; ?>
 
-	<?php if ( count( $tabs ) > 0 ) : ?>
-		<?php foreach ( $tabs as $i => $tab ) : ?>
+	<?php if ( count( $tabs_output ) > 0 ) : ?>
+		<?php foreach ( $tabs_output as $i => $tab ) : ?>
 			<small class="lsx-testimonials-meta-wrap">
 				<i class="fa fa-<?php echo esc_attr( $tab['icon'] ); ?>"></i> <span class="lsx-testimonials-meta"><?php echo esc_html( $tab['title'] ); ?>:</span>
 				<?php echo wp_kses_post( $tab['posts_html'] ); ?>
