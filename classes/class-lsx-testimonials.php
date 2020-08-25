@@ -90,7 +90,8 @@ class LSX_Testimonials {
 	}
 
 	public function output( $atts ) {
-		extract(
+		// @codingStandardsIgnoreLineStart
+		extract( // @codingStandardsIgnoreLine
 			shortcode_atts(
 				array(
 					'columns'    => 1,
@@ -107,7 +108,8 @@ class LSX_Testimonials {
 					'title'      => ' ',
 				), $atts
 			)
-		); // @codingStandardsIgnoreLine
+		);
+		// @codingStandardsIgnoreLineEnd
 
 		$output = '';
 
