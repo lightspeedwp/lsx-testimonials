@@ -116,8 +116,6 @@ class LSX_Testimonials_Admin {
 				'slug' => 'testimonial-tag',
 			),
 			'show_in_rest'          => true,
-			'rest_base'             => 'testimonialtag',
-			'rest_controller_class' => 'WP_REST_Terms_Controller',
 		);
 
 		register_taxonomy( 'testimonial_tag', array( 'testimonial' ), $args );

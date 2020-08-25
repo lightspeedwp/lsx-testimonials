@@ -33,6 +33,7 @@ class LSX_Testimonials_Frontend {
 
 		add_filter( 'lsx_fonts_css', array( $this, 'customizer_fonts_handler' ), 15 );
 		add_filter( 'lsx_banner_title', array( $this, 'lsx_banner_archive_title' ), 15 );
+		add_filter( 'get_the_archive_title', array( $this, 'archive_title' ), 100 );
 
 		add_filter( 'excerpt_more_p', array( $this, 'change_excerpt_more' ) );
 		add_filter( 'excerpt_length', array( $this, 'change_excerpt_length' ) );
@@ -215,6 +216,17 @@ class LSX_Testimonials_Frontend {
 			$pieces[] = new \LSX_Testimonials_Schema( $context );
 		}
 		return $pieces;
+	}
+
+	/**
+	 * Change the LSX Banners title for team archive.
+	 */
+	public function archive_title( $title ) {
+		if ( is_main_query() && is_post_type_archive( 'testimonial' ) ) {
+			$title = '<h1 class="page-title">' . esc_html__( 'Testimonials', 'lsx-testimonials' ) . '</h1>';
+		}
+
+		return $title;
 	}
 
 }
