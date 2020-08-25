@@ -107,7 +107,7 @@ class LSX_Testimonials {
 					'title'      => ' ',
 				), $atts
 			)
-		); // @codeCoverageIgnore
+		); // @codingStandardsIgnoreLine
 
 		$output = '';
 
