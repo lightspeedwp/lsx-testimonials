@@ -31,7 +31,6 @@ class Settings {
 	public function __construct() {
 		add_action( 'cmb2_admin_init', array( $this, 'register_settings_page' ) );
 		add_action( 'lsx_testimonials_settings_page', array( $this, 'general_settings' ), 1, 1 );
-		add_action( 'lsx_testimonials_settings_page', array( $this, 'contact_modal_settings' ), 1, 1 );
 	}
 
 	/**
