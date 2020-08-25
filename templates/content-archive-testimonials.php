@@ -34,15 +34,20 @@
 
 		<blockquote class="lsx-testimonials-content">
 		<?php
-		if ( ! has_excerpt() ) {
+		if ( ! testimonials_get_option( 'testimonials_disable_single' ) ) {
+			if ( ! has_excerpt() ) {
 
-			$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
-			$content      = wp_trim_words( get_the_content(), 20 );
-			$content      = '<p>' . $content . '</p>' . $excerpt_more;
-			echo wp_kses_post( $content );
+				$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
+				$content      = wp_trim_words( get_the_content(), 20 );
+				$content      = '<p>' . $content . '</p>' . $excerpt_more;
+				echo wp_kses_post( $content );
+			} else {
+				the_excerpt();
+			}
 		} else {
-			the_excerpt();
+			the_content();
 		}
+
 		?>
 		</blockquote>
 	</article>

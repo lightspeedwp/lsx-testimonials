@@ -11,21 +11,14 @@
  */
 class LSX_Testimonials_Frontend {
 	public function __construct() {
-		if ( function_exists( 'tour_operator' ) ) {
-			$this->options = get_option( '_lsx-to_settings', false );
-		} else {
-			$this->options = get_option( '_lsx_settings', false );
-			if ( false === $this->options ) {
-				$this->options = get_option( '_lsx_lsx-settings', false );
-			}
-		}
+		$this->options = testimonials_get_options();
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 5 );
 		add_filter( 'wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ), 10, 2 );
 		add_filter( 'template_include', array( $this, 'single_template_include' ), 99 );
 		add_filter( 'template_include', array( $this, 'archive_template_include' ), 99 );
 
-		if ( ! empty( $this->options['display'] ) && ! empty( $this->options['display']['testimonials_disable_single'] ) ) {
+		if ( ! empty( $this->options['display']['testimonials_disable_single'] ) ) {
 			add_action( 'template_redirect', array( $this, 'disable_single' ) );
 		}
 
@@ -40,6 +33,7 @@ class LSX_Testimonials_Frontend {
 
 		add_filter( 'lsx_fonts_css', array( $this, 'customizer_fonts_handler' ), 15 );
 		add_filter( 'lsx_banner_title', array( $this, 'lsx_banner_archive_title' ), 15 );
+		add_filter( 'get_the_archive_title', array( $this, 'archive_title' ), 100 );
 
 		add_filter( 'excerpt_more_p', array( $this, 'change_excerpt_more' ) );
 		add_filter( 'excerpt_length', array( $this, 'change_excerpt_length' ) );
@@ -177,7 +171,8 @@ class LSX_Testimonials_Frontend {
 		global $post;
 
 		if ( 'testimonial' === $post->post_type ) {
-			if ( ! empty( $this->options['display'] ) && ! empty( $this->options['display']['testimonials_disable_single'] ) ) {
+
+			if ( ! empty( $this->options['display']['testimonials_disable_single'] ) ) {
 				$excerpt_more = '';
 			}
 		}
@@ -221,6 +216,17 @@ class LSX_Testimonials_Frontend {
 			$pieces[] = new \LSX_Testimonials_Schema( $context );
 		}
 		return $pieces;
+	}
+
+	/**
+	 * Change the LSX Banners title for team archive.
+	 */
+	public function archive_title( $title ) {
+		if ( is_main_query() && is_post_type_archive( 'testimonial' ) ) {
+			$title = '<h1 class="page-title">' . esc_html__( 'Testimonials', 'lsx-testimonials' ) . '</h1>';
+		}
+
+		return $title;
 	}
 
 }

@@ -15,14 +15,7 @@ class LSX_Testimonials {
 	public $options;
 
 	public function __construct() {
-		if ( function_exists( 'tour_operator' ) ) {
-				$this->options = get_option( '_lsx-to_settings', false );
-		} else {
-				$this->options = get_option( '_lsx_settings', false );
-			if ( false === $this->options ) {
-				$this->options = get_option( '_lsx_lsx-settings', false );
-			}
-		}
+		$this->options = testimonials_get_options();
 
 		add_filter( 'lsx_banner_allowed_post_types', array( $this, 'lsx_banner_allowed_post_types' ) );
 	}
@@ -97,7 +90,8 @@ class LSX_Testimonials {
 	}
 
 	public function output( $atts ) {
-		extract(
+		// @codingStandardsIgnoreLineStart
+		extract( // @codingStandardsIgnoreLine
 			shortcode_atts(
 				array(
 					'columns'    => 1,
@@ -115,6 +109,7 @@ class LSX_Testimonials {
 				), $atts
 			)
 		);
+		// @codingStandardsIgnoreLineEnd
 
 		$output = '';
 

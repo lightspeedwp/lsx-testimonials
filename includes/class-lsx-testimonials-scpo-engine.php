@@ -12,6 +12,7 @@ $lsx_testimonials_scporder = new LSX_Testimonials_SCPO_Engine();
  * @copyright 2018 LightSpeed
  */
 class LSX_Testimonials_SCPO_Engine {
+	// @codingStandardsIgnoreStart
 	function __construct() {
 		if ( ! get_option( 'lsx_testimonials_scporder_install' ) ) {
 			$this->lsx_testimonials_scporder_install();
@@ -277,7 +278,7 @@ class LSX_Testimonials_SCPO_Engine {
 			'testimonial' => esc_html_x( 'Testimonial', 'post type singular name', 'lsx-testimonial' ),
 		);
 	}
-
+	// @codingStandardsIgnoreEnd
 }
 
 /**

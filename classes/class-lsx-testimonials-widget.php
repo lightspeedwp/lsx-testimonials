@@ -19,7 +19,7 @@ class LSX_Testimonials_Widget extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-		extract( $args );
+		extract( $args ); // @codingStandardsIgnoreLine
 
 		$title       = $instance['title'];
 		$title_link  = $instance['title_link'];
