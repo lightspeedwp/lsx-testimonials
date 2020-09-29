@@ -110,6 +110,8 @@
 
 #lsx-testimonials-slider .slick-arrow.slick-next:before { content: "\f105"; left: 1.5rem; }
 
+.gutenberg-compatible-template.using-gutenberg .entry-content .lsx-testimonial-block > .row, .gutenberg-compatible-template.using-gutenberg .entry-content .lsx-testimonials-shortcode > .row { margin-left: auto; margin-right: auto; }
+
 .post-type-archive-testimonial .lsx-testimonials-container:last-of-type .lsx-testimonials-slot, .post-type-archive-testimonial .lsx-testimonials-container:only-of-type .lsx-testimonials-slot { margin-bottom: 0; }
 
 .post-type-archive-testimonial .lsx-testimonials-slot { margin: 0 0 8.5rem; text-align: center; }
