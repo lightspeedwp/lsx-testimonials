@@ -1,14 +1,21 @@
 # Change log
 
-## 1.2.4 - In development
+## 1.3.0 - In development
 
 ### Added
 
 - Added default WP 5.5 lazyloading.
 
 ### Added
+
 - Changed UIX for CMB2.
 
+### Security
+
+- Updating dependencies to prevent vulnerabilities.
+- Updating PHPCS options for better code.
+- General testing to ensure compatibility with latest WordPress version (5.5).
+- General testing to ensure compatibility with latest LSX Theme version (2.9).
 
 ## [[1.2.3]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.2.3) - 2020-03-30
 

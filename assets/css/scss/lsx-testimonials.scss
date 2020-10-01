@@ -1,5 +1,5 @@
-@import 'include-media';
-@import 'customizer-testimonials-body-colours';
+@import "include-media";
+@import "customizer-testimonials-body-colours";
 
 .single-testimonial {
 	article.testimonial {
@@ -11,7 +11,9 @@
 		.tab-pane {
 			padding: 4rem;
 
-			@include media('>=phone') { padding: 4rem 2rem; }
+			@include media(">=phone") {
+				padding: 4rem 2rem;
+			}
 		}
 
 		.nav-tabs {
@@ -28,20 +30,24 @@
 			margin: 4.25rem 0;
 			padding-left: 0;
 
-			@include media('>=phone') { flex-flow: row nowrap; }
+			@include media(">=phone") {
+				flex-flow: row nowrap;
+			}
 
 			& > li {
 				margin-bottom: 0;
 				width: 100%;
 
-				@include media('>=phone') {
+				@include media(">=phone") {
 					display: flex;
 					flex: 1 1 auto;
 					max-width: 350px;
 				}
 
 				& + li {
-					@include media('>=phone') { margin-left: 5px; }
+					@include media(">=phone") {
+						margin-left: 5px;
+					}
 				}
 
 				& > a {
@@ -53,23 +59,25 @@
 					text-align: center;
 					transition: all 300ms ease;
 
-					@include media('>=phone') {
+					@include media(">=phone") {
 						align-items: center;
 						display: flex;
 						flex: 1 1 auto;
 						justify-content: center;
 					}
 
-					@include media('>=tablet') { font-size: 22px; }
+					@include media(">=tablet") {
+						font-size: 22px;
+					}
 				}
 
 				&.active > a {
 					border: 0 none;
 					position: relative;
 
-					@include media('>=phone') {
+					@include media(">=phone") {
 						&:after {
-							content: '';
+							content: "";
 							border-style: solid;
 							border-width: 0 6px 6px 6px;
 							bottom: 0;
@@ -79,7 +87,9 @@
 							transform: translateX(-50%);
 							width: 0;
 
-							@include media('>=tablet') { border-width: 0 9px 9px 9px; }
+							@include media(">=tablet") {
+								border-width: 0 9px 9px 9px;
+							}
 						}
 					}
 				}
@@ -102,15 +112,21 @@
 		margin-top: 1.2rem;
 		text-align: center;
 
-		& > .lsx-testimonials-meta { margin: 0 4px; }
+		& > .lsx-testimonials-meta {
+			margin: 0 4px;
+		}
 	}
 
-	.lsx-testimonials-content { max-width: none; }
+	.lsx-testimonials-content {
+		max-width: none;
+	}
 }
 
 .widget.lsx-testimonials {
 	.tagline {
-		& + .lsx-testimonials-shortcode { margin-top: 0; }
+		& + .lsx-testimonials-shortcode {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -126,7 +142,7 @@
 
 	&:before,
 	&:after {
-		content: '';
+		content: "";
 		display: block;
 		height: 2px;
 		position: absolute;
@@ -135,17 +151,23 @@
 		width: 999rem;
 	}
 
-	&:before { right: 120%; }
-	&:after { left: 120%; }
+	&:before {
+		right: 120%;
+	}
+	&:after {
+		left: 120%;
+	}
 }
 
-.lsx-testimonials-shortcode { margin-top: -4rem; }
+.lsx-testimonials-shortcode {
+	margin-top: -4rem;
+}
 
 .lsx-testimonials-slot {
 	margin-top: 4rem;
 
 	&:only-child {
-		@include media('>=phone') {
+		@include media(">=phone") {
 			float: none;
 			margin-left: auto !important;
 			margin-right: auto !important;
@@ -172,8 +194,8 @@
 		margin-bottom: 2rem;
 		margin-top: calc(25px + 1.2rem);
 		width: 100%;
-
-		@include media('>=tablet') {
+		color: #4a4a4a;
+		@include media(">=tablet") {
 			margin-top: calc(30px + 1.2rem);
 			max-width: none;
 		}
@@ -183,9 +205,9 @@
 			font-style: normal;
 
 			&:after {
-				content: '\f178';
+				content: "\f178";
 				display: inline-block;
-				font-family: 'FontAwesome';
+				font-family: "FontAwesome";
 				font-size: inherit;
 				margin-left: 5px;
 				text-rendering: auto;
@@ -202,12 +224,14 @@
 		margin-top: 1.2rem;
 		text-align: center;
 
-		& > .lsx-testimonials-meta { margin: 0 4px; }
+		& > .lsx-testimonials-meta {
+			margin: 0 4px;
+		}
 	}
 }
 
 #lsx-testimonials-slider {
-	@include media('>=tablet') {
+	@include media(">=tablet") {
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
@@ -215,15 +239,16 @@
 		&.slick-has-arrows {
 			width: calc(100% - 8rem);
 		}
-
 	}
 
-	@include media('>=1280px') {
+	@include media(">=1280px") {
 		margin-left: -15px;
 		margin-right: -15px;
 		width: calc(100% + 30px);
 
-		&.slick-has-arrows { width: calc(100% + 30px); }
+		&.slick-has-arrows {
+			width: calc(100% + 30px);
+		}
 		&.lsx-testimonial-block {
 			max-width: 60%;
 			width: 60%;
@@ -249,12 +274,14 @@
 		margin-left: -15px;
 		margin-right: -15px;
 
-		@include media('>=phone') {
+		@include media(">=phone") {
 			margin-left: auto;
 			margin-right: auto;
 			width: 100%;
 
-			&.slick-has-arrows { width: calc(100% - 8rem); }
+			&.slick-has-arrows {
+				width: calc(100% - 8rem);
+			}
 		}
 	}
 
@@ -277,7 +304,9 @@
 			line-height: 1;
 			padding: 5px;
 
-			@include media('>=tablet') { padding: 0 7.5px; }
+			@include media(">=tablet") {
+				padding: 0 7.5px;
+			}
 
 			& > button {
 				background: transparent;
@@ -288,7 +317,9 @@
 				transition: all 300ms ease-in-out;
 				width: 4rem;
 
-				@include media('>=tablet') { height: 6px; }
+				@include media(">=tablet") {
+					height: 6px;
+				}
 			}
 		}
 	}
@@ -313,7 +344,7 @@
 
 		&:before {
 			display: block;
-			font-family: 'FontAwesome';
+			font-family: "FontAwesome";
 			font-size: 3rem;
 			line-height: 1;
 			position: absolute;
@@ -326,13 +357,15 @@
 			-moz-osx-font-smoothing: grayscale;
 		}
 
-		&.slick-disabled { cursor: not-allowed; }
+		&.slick-disabled {
+			cursor: not-allowed;
+		}
 
 		&.slick-prev {
 			left: -4rem;
 
 			&:before {
-				content: '\f104';
+				content: "\f104";
 				left: 1.1rem;
 			}
 		}
@@ -341,8 +374,20 @@
 			right: -4rem;
 
 			&:before {
-				content: '\f105';
+				content: "\f105";
 				left: 1.5rem;
+			}
+		}
+	}
+}
+
+.gutenberg-compatible-template.using-gutenberg {
+	.entry-content {
+		.lsx-testimonial-block,
+		.lsx-testimonials-shortcode {
+			> .row {
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}
@@ -352,7 +397,9 @@
 	.lsx-testimonials-container {
 		&:last-of-type,
 		&:only-of-type {
-			.lsx-testimonials-slot { margin-bottom: 0; }
+			.lsx-testimonials-slot {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -360,15 +407,26 @@
 		margin: 0 0 8.5rem;
 		text-align: center;
 
-		.lsx-testimonials-title { margin-bottom: 5px; }
+		.lsx-testimonials-title {
+			margin-bottom: 5px;
+		}
 
 		.lsx-testimonials-content {
 			margin-top: calc(25px + 1.2rem);
 			border-color: #dadddf;
-
-			@include media('>=tablet') { margin-top: calc(30px + 1.2rem); }
+			color: #4a4a4a;
+			@include media(">=tablet") {
+				margin-top: calc(30px + 1.2rem);
+			}
 		}
 	}
 }
 
-@include customizer-testimonials-body-colours(#F6F6F6, #DADDDF, #4A4A4A, #418AD0, #F7AE00, #919191);
+@include customizer-testimonials-body-colours(
+	#f6f6f6,
+	#dadddf,
+	#4a4a4a,
+	#418ad0,
+	#f7ae00,
+	#919191
+);
