@@ -147,6 +147,8 @@
 		<?php echo wp_kses_post( $thumbnail ); ?>
 	</figure>
 
+	<h5 class="lsx-testimonials-title" style="text-align:center;"><?php the_title(); ?></h5>
+
 	<?php if ( ! empty( $byline ) ) : ?>
 		<small class="lsx-testimonials-meta-wrap">
 			<i class="fa fa-briefcase"></i> <span class="lsx-testimonials-meta"><?php esc_html_e( 'Role & Company', 'lsx-testimonials' ); ?>:</span>
