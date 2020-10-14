@@ -12,7 +12,7 @@
 	$url = get_post_meta( get_the_ID(), 'lsx_testimonial_url', true );
 ?>
 
-<div class="col-xs-12 lsx-testimonials-container">
+<div class="col-xs-12 col-md-6 lsx-testimonials-container">
 	<article class="lsx-testimonials-slot">
 		<figure class="lsx-testimonials-avatar">
 			<?php echo wp_kses_post( $thumbnail ); ?>

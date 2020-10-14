@@ -6,9 +6,10 @@
 
 - Added default WP 5.5 lazyloading.
 
-### Added
+### Changed
 
 - Changed UIX for CMB2.
+- Changed the archive template to display 2 testimonials instead of 1.
 
 ### Security
 
