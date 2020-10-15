@@ -162,12 +162,16 @@
 	<?php endif; ?>
 
 	<?php if ( count( $tabs_output ) > 0 ) : ?>
-		<?php foreach ( $tabs_output as $i => $tab_output ) : ?>
+		<?php foreach ( $tabs_output as $i => $tab_output ) :
+			if ( $tab_output['posts_html'] ) {
+			?>
 			<small class="lsx-testimonials-meta-wrap">
 				<i class="fa fa-<?php echo esc_attr( $tab_output['icon'] ); ?>"></i> <span class="lsx-testimonials-meta"><?php echo esc_html( $tab_output['title'] ); ?>:</span>
 				<?php echo wp_kses_post( $tab_output['posts_html'] ); ?>
 			</small>
-		<?php endforeach; ?>
+			<?php
+			}
+		endforeach; ?>
 	<?php endif; ?>
 
 	<blockquote class="lsx-testimonials-content"><?php the_content(); ?></blockquote>
