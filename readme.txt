@@ -1,6 +1,6 @@
 === LSX Testimonials ===
-Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, virginialsdev, deon80, jaab1985, jacquesvdh, ignusvermaak, garthlsdev
-Donate link: https://donate.lsdev.biz/
+Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, jacquesvdh, ignusvermaak
+Donate link: https://lsdev.biz/lsx/donate/
 Tags: lsx, gutenberg, testimonials, post type, carousel
 Requires at least: 5.3
 Tested up to: 5.5
@@ -9,13 +9,13 @@ Stable tag: 1.3.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-The [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) adds a section to your website for storing your testimonial information. 
+The [LSX Testimonials plugin](https://www.lsdev.biz/lsx/extensions/testimonials/) adds a section to your website for storing your testimonial information. 
 
 Create a profile per testimonial, display them in an attractive carousel and house them all in an archive for all your users to view. 
 
 People like to see a face behind a business, it gives you a more personal, approachable relationship with your users. 
 
-The [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) allows you to display your testimonial profiles beautifully on your website. 
+The [LSX Testimonials plugin](https://www.lsdev.biz/lsx/extensions/testimonials/) allows you to display your testimonial profiles beautifully on your website. 
 
 == Works with the LSX Theme ==
 
@@ -31,7 +31,7 @@ We’re firm believers in open source - that’s why the [LSX Testimonials plugi
 
 == LSX Testimonials Documentation ==
 
-We have created extensive documentation on all of the LSX Testimonials Plugin functionality. This means a hassle free installation and setup with no code requirements. Go to the [LSX Testimonials Documentation](https://lsx.lsdev.biz/documentation/lsx-testimonials/).
+We have created extensive documentation on all of the LSX Testimonials Plugin functionality. This means a hassle free installation and setup with no code requirements. Go to the [LSX Testimonials Documentation](https://www.lsdev.biz/lsx/documentation/lsx-testimonials/).
 
 == LSX Testimonials Help & Support ==
 
