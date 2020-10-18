@@ -9,7 +9,7 @@ Stable tag: 1.3.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-The LSX Testimonials plugin adds a section to your website for storing your testimonial information. 
+This plugin adds a section to your website for storing your testimonial information. 
 
 == Description ==
 
@@ -21,11 +21,11 @@ The [LSX Testimonials plugin](https://www.lsdev.biz/lsx/extensions/testimonials/
 
 = Works with the LSX Theme =
 
-Our  [theme](https://lsx.lsdev.biz/) works perfectly with the Testimonials Extension, improving internal linking, website SEO and user experience! 
+Our  [theme](https://www.lsdev.biz/lsx/) works perfectly with the Testimonials Extension, improving internal linking, website SEO and user experience! 
 
 = Gutenberg Compatible =
 
-Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Testimonials Plugin has been optimized for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information. 
+Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Testimonials Plugin has been optimized for the Gutenberg update. Check out our [release post](https://lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information. 
 
 = LSX Team Demo = 
 
