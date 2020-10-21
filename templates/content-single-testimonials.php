@@ -104,7 +104,11 @@
 	$tab_team['posts'] = get_post_meta( get_the_ID(), 'team_to_testimonial', false );
 
 	if ( ! empty( $tab_team['posts'][0] ) ) {
-		$post_ids = join( ',', $tab_team['posts'][0] );
+		if ( is_array( $tab_team['posts'][0] ) ) {
+			$post_ids = join( ',', $tab_team['posts'][0] );
+		} else {
+			$post_ids = $tab_team['posts'][0];
+		}
 		// $tab_team['shortcode'] = '[lsx_team columns="4" include="' . $post_ids . '" show_social="false" show_desc="false" show_link="true"]';
 
 		$tab_team['posts_html'] = '';
