@@ -105,9 +105,9 @@
 
 	if ( ! empty( $tab_team['posts'][0] ) ) {
 		if ( is_array( $tab_team['posts'][0] ) ) {
-			$post_ids = join( ',', $tab_team['posts'][0] );
-		} else {
 			$post_ids = $tab_team['posts'][0];
+		} else {
+			$post_ids = array( $tab_team['posts'][0] );
 		}
 		// $tab_team['shortcode'] = '[lsx_team columns="4" include="' . $post_ids . '" show_social="false" show_desc="false" show_link="true"]';
 
@@ -115,7 +115,7 @@
 
 		$args = array(
 			'post_type'              => 'team',
-			'post__in'               => $tab_team['posts'][0],
+			'post__in'               => $post_ids,
 			'orderby'                => 'post__in',
 			'no_found_rows'          => true,
 			'ignore_sticky_posts'    => 1,
