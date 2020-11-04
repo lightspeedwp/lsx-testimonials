@@ -2,14 +2,14 @@
 Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, jacquesvdh, ignusvermaak
 Donate link: https://lsdev.biz/lsx/donate/
 Tags: lsx, gutenberg, testimonials, post type, carousel
-Requires at least: 5.3
-Tested up to: 5.5
-Requires PHP: 7.2
+Requires at least: 5.0
+Tested up to: 5.5.3
+Requires PHP: 7.0
 Stable tag: 1.3.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-This plugin adds a section to your website for storing your testimonial information. 
+The LSX Testimonials plugin adds a section to your website for storing your testimonial information. 
 
 == Description ==
 
@@ -17,30 +17,43 @@ Create a profile per testimonial, display them in an attractive carousel and hou
 
 People like to see a face behind a business, it gives you a more personal, approachable relationship with your users. 
 
-The [LSX Testimonials plugin](https://www.lsdev.biz/lsx/extensions/testimonials/) allows you to display your testimonial profiles beautifully on your website. 
+The [LSX Testimonials plugin](https://lsdev.biz/lsx/extensions/testimonials/) allows you to display your testimonial profiles beautifully on your website. 
+
+Testimonial features include:
+* linking a gravatar profile which displays the gravatar profile image
+* adding a company name and job title, with a link to a company website
+* Add a featured image
+* Use with LSX Projects and LSX Team to cross-reference team members and projects related to the testimonial
+* Use the [LSX Blocks plugin](https://wordpress.org/plugins/lsx-blocks/) to get a Team block for building your pages more easily. Control the layout of your team posts in the block settings.
 
 = Works with the LSX Theme =
 
 Our  [theme](https://www.lsdev.biz/lsx/) works perfectly with the Testimonials Extension, improving internal linking, website SEO and user experience! 
 
-= Gutenberg Compatible =
+= Free Companion Theme = 
 
-Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Testimonials Plugin has been optimized for the Gutenberg update. Check out our [release post](https://lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information. 
+LSX Team is built to show off the best of the WordPress block editor, but it requires the free LSX theme in the WordPress theme repository as the perfect companion for LSX Blocks - https://wordpress.org/themes/lsx/
+
+= Block Editor Support = 
+
+The LSX theme is full compatible with the WordPress block editor. This means you can now make use of the drag-and-drop page builder when creating new pages and posts. 
+
+[LSX Blocks](https://lsdev.biz/lsx/extensions/blocks) is an extension with blocks designed to display perfectly with the LSX theme. The blocks plugin extends various WordPress core blocks to be more flexible with the WordPress theme. 
+
+The combination of LSX Theme & LSX Blocks gives you a true page builder experience using the WordPress Gutenberg block editor.
 
 = LSX Team Demo = 
 
-* [Add the LSX Team block to your homepage](https://lsx-demo.lsdev.biz/)
-* [LSX Team Archive](https://lsx-demo.lsdev.biz/team/)
-* [Single team member demo that displays a tab of connected testimonials & connect blog posts](https://lsx-demo.lsdev.biz/team/ashley-shaw/)
-* [LSX Testimonials Block](https://lsx-demo.lsdev.biz/blocks/lsx-team-block/)
-
-= It's free, and always will be. =
-
-We’re firm believers in open source - that’s why the [LSX Testimonials plugin](https://lsx.lsdev.biz/extensions/testimonials/) is free, and that won't change. We are constantly maintaining and updating our extension so you have the latest and greatest abilities on your LSX Theme powered site. 
+* [LSX Testimonials Archive](https://lsx-demo.lsdev.biz/testimonials/carmen-botma/)
+* [Single Testimonial](https://lsx-demo.lsdev.biz/testimonials/carmen-botma/)
+* [LSX Testimonials Block](https://lsx-demo.lsdev.biz/blocks/lsx-testimonials-block/)
 
 = Documentation =
+We have extensive documentation on all our plugins and theme functionality. This allows you to take control of your website setup and design to your needs: 
 
-We have created extensive documentation on all of the LSX Testimonials Plugin functionality. This means a hassle free installation and setup with no code requirements. Go to the [LSX Testimonials Documentation](https://www.lsdev.biz/lsx/documentation/lsx-extensions/lsx-testimonials/).
+* [LSX Testimonials Documentation](https://www.lsdev.biz/lsx/documentation/lsx-extensions/lsx-testimonials/).
+* [LSX Theme](https://lsdev.biz/lsx/documentation/lsx-theme/)
+* [LSX Blocks](https://www.lsdev.biz/lsx/documentation/lsx-blocks/)
 
 = Support =
 
@@ -54,33 +67,23 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 == Screenshots ==
 
-1. The Settings Panel
-2. The Frontend Display
-
-== Screenshots ==
-
-1. Back-end Gutenberg block selection
-2. Block Settings Screenshot - Recommend LSX Container
-3. Block Usage Screenshot 1
-4. Block Usage Screenshot 2
-5. Block Usage Screenshot 3
-
+1. The main testimonials archive
+2. The testimonial block with carousel option enabled
+3. Single Testimonial
+4. Settings page
 
 == Frequently Asked Questions ==
 
 Take a look at all our [Frequently Asked Questions](https://www.lsdev.biz/lsx/documentation/lsx-theme/lsx-theme-faqs/), we are sure you'll find what you're looking for. 
 
-= First question? =
-First answer
+= I’ve installed the plugin, now what? =
+Go to Testimonials > Add new and start adding Testimonials to your website.  Follow the steps in the documentation linked below to find out about all the options.
 
-= Second question? =
-First answer
+= Will the LSX Testimonials plugin work with my theme? =
+Not unless you are making use of the [The LSX theme!](https://wordpress.org/themes/lsx/) 
 
-= Third question? =
-First answer
+All of the LSX Extensions were built for the LSX theme. Be sure to have it installed and activated for this extension to function. 
 
 == Changelog == 
 
-[Lastest changelogs can be found on GitHub](https://github.com/lightspeeddevelopment/lsx-blocks/blob/master/changelog.md).
-
-== Upgrade Notice == 
+[Lastest changelogs can be found on GitHub](https://github.com/lightspeeddevelopment/lsx-testimonials/blob/master/changelog.md).

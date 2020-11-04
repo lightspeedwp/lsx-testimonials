@@ -104,14 +104,18 @@
 	$tab_team['posts'] = get_post_meta( get_the_ID(), 'team_to_testimonial', false );
 
 	if ( ! empty( $tab_team['posts'][0] ) ) {
-		$post_ids = join( ',', $tab_team['posts'][0] );
+		if ( is_array( $tab_team['posts'][0] ) ) {
+			$post_ids = $tab_team['posts'][0];
+		} else {
+			$post_ids = array( $tab_team['posts'][0] );
+		}
 		// $tab_team['shortcode'] = '[lsx_team columns="4" include="' . $post_ids . '" show_social="false" show_desc="false" show_link="true"]';
 
 		$tab_team['posts_html'] = '';
 
 		$args = array(
 			'post_type'              => 'team',
-			'post__in'               => $tab_team['posts'][0],
+			'post__in'               => $post_ids,
 			'orderby'                => 'post__in',
 			'no_found_rows'          => true,
 			'ignore_sticky_posts'    => 1,
