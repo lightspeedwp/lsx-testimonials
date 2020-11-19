@@ -1,7 +1,7 @@
 === LSX Testimonials ===
 Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, jacquesvdh, ignusvermaak
 Donate link: https://lsdev.biz/lsx/donate/
-Tags: lsx, gutenberg, testimonials, post type, carousel
+Tags: lsx, block editor, testimonials, blocks, carousel
 Requires at least: 5.0
 Tested up to: 5.5.3
 Requires PHP: 7.0
@@ -20,19 +20,15 @@ People like to see a face behind a business, it gives you a more personal, appro
 The [LSX Testimonials plugin](https://lsdev.biz/lsx/extensions/testimonials/) allows you to display your testimonial profiles beautifully on your website. 
 
 Testimonial features include:
-* linking a gravatar profile which displays the gravatar profile image
-* adding a company name and job title, with a link to a company website
+* Link a gravatar profile which displays the gravatar profile image
+* Add a company name and job title, with a link to a company website
 * Add a featured image
-* Use with LSX Projects and LSX Team to cross-reference team members and projects related to the testimonial
+* Use with [LSX Projects](https://lsdev.biz/lsx/extensions/projects/) and LSX Team to cross-reference team members and projects related to the testimonial
 * Use the [LSX Blocks plugin](https://wordpress.org/plugins/lsx-blocks/) to get a Team block for building your pages more easily. Control the layout of your team posts in the block settings.
-
-= Works with the LSX Theme =
-
-Our  [theme](https://www.lsdev.biz/lsx/) works perfectly with the Testimonials Extension, improving internal linking, website SEO and user experience! 
 
 = Free Companion Theme = 
 
-LSX Team is built to show off the best of the WordPress block editor, but it requires the free LSX theme in the WordPress theme repository as the perfect companion for LSX Blocks - https://wordpress.org/themes/lsx/
+Designed for the WordPress block editor, LSX Testimonials is built to show off your client testimonials using the free [LSX theme](https://lsdev.biz/lsx/) that is available via the WordPress theme repository and easily installable via your WordPress backend.
 
 = Block Editor Support = 
 
@@ -42,7 +38,7 @@ The LSX theme is full compatible with the WordPress block editor. This means you
 
 The combination of LSX Theme & LSX Blocks gives you a true page builder experience using the WordPress Gutenberg block editor.
 
-= LSX Team Demo = 
+= LSX Testimonials Demo = 
 
 * [LSX Testimonials Archive](https://lsx-demo.lsdev.biz/testimonials/carmen-botma/)
 * [Single Testimonial](https://lsx-demo.lsdev.biz/testimonials/carmen-botma/)
@@ -57,7 +53,7 @@ We have extensive documentation on all our plugins and theme functionality. This
 
 = Support =
 
-Contact the [LightSpeed](https://lsdev.biz/) for assistance via the [LSX support form](https://www.lsdev.biz/lsx/support/).
+Contact the [LightSpeed](https://lsdev.biz/) for assistance via the [LSX support form](https://lsdev.biz/lsx/support/).
 
 If you are experiencing issues with the LSX Testimonials Plugin & have experience with Github, please log any bug issues you are having on the [LSX Testimonials Github Issues](https://github.com/lightspeeddevelopment/lsx-testimonials/issues/) page.
 
@@ -74,7 +70,7 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 == Frequently Asked Questions ==
 
-Take a look at all our [Frequently Asked Questions](https://www.lsdev.biz/lsx/documentation/lsx-theme/lsx-theme-faqs/), we are sure you'll find what you're looking for. 
+Take a look at all our [Frequently Asked Questions](https://lsdev.biz/lsx/documentation/lsx-theme/lsx-theme-faqs/), we are sure you'll find what you're looking for. 
 
 = I’ve installed the plugin, now what? =
 Go to Testimonials > Add new and start adding Testimonials to your website.  Follow the steps in the documentation linked below to find out about all the options.
