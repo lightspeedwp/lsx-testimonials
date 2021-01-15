@@ -3,9 +3,9 @@ Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, jacquesvdh, ignusver
 Donate link: https://lsdev.biz/lsx/donate/
 Tags: lsx, gutenberg, testimonials, post type, carousel
 Requires at least: 5.3
-Tested up to: 5.5
+Tested up to: 5.6
 Requires PHP: 7.2
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 

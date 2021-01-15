@@ -1,6 +1,6 @@
 {
   "name": "lsx-testimonials",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Testimonials for LSX",
   "main": "gulpfile.js",
   "scripts": {

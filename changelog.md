@@ -1,6 +1,18 @@
 # Change log
 
-## 1.3.0 - In development
+## [[1.3.1]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.1) - 2020-01-15
+
+### Fixed
+- Updated the single H5 to H1 for SEO and semantic.
+
+### Updated
+- Documentation and support links.
+- Updated the changelog.
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (5.6).
+
+## [[1.3.0]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.0) - 2020-10-04
 
 ### Added
 
