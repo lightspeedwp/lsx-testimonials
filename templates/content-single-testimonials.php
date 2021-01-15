@@ -151,7 +151,7 @@
 		<?php echo wp_kses_post( $thumbnail ); ?>
 	</figure>
 
-	<h5 class="lsx-testimonials-title" style="text-align:center;"><?php the_title(); ?></h5>
+	<h1 class="lsx-testimonials-title" style="text-align:center;"><?php the_title(); ?></h1>
 
 	<?php if ( ! empty( $byline ) ) : ?>
 		<small class="lsx-testimonials-meta-wrap">

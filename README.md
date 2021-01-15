@@ -1,4 +1,4 @@
-<p align="center"><a target="_blank" href="https://lsx.lsdev.biz/"><img width="100px;" src="https://lsx.lsdev.biz/wp-content/uploads/2019/03/Testimonials.svg" alt="LSX Testimonials Extension"></a>
+<p align="center"><a target="_blank" href="https://lsx.lsdev.biz/"><img src="https://www.lsdev.biz/wp-content/uploads/2020/11/lsx-testimonials-banner-772x250-1.jpg" alt="LSX Testimonials Extension"></a>
 </p>
 <h1 align="center">LSX Testimonials</h1>
 
