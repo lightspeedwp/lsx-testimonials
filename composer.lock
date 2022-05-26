@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d68b27328fc0c5a67df2580bd67ea341",
+    "content-hash": "f74435add44b633f25478a44a32705ef",
     "packages": [
         {
             "name": "composer/installers",
@@ -2161,15 +2161,15 @@
         },
         {
             "name": "wpackagist-theme/lsx",
-            "version": "2.9.5",
+            "version": "3.0",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/lsx/",
-                "reference": "2.9.5"
+                "reference": "3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/lsx.2.9.5.zip"
+                "url": "https://downloads.wordpress.org/theme/lsx.3.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
