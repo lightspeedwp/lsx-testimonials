@@ -1,5 +1,10 @@
 # Change log
 
+## [[1.3.2]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.2) - In Development
+
+### Fixed
+- Compatability error with ACF relationship fields.
+
 ## [[1.3.1]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.1) - 2020-01-15
 
 ### Fixed
