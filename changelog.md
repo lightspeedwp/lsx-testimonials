@@ -4,6 +4,7 @@
 
 ### Fixed
 - Compatability error with ACF relationship fields.
+- CSS class mismatch causing the slider to fail initialization
 
 ## [[1.3.1]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.1) - 2020-01-15
 
