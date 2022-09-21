@@ -10,6 +10,8 @@
 ### Fixed
 - Compatability error with ACF relationship fields.
 - CSS class mismatch causing the slider to fail initialization
+
+### Security
 - General testing to ensure compatibility with latest WordPress version (6.0).
 
 ## [[1.3.1]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.1) - 2021-01-15
