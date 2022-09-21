@@ -4,6 +4,7 @@
 
 ### Fixed
 - A php fatal error on the single content template.
+- The service and portfolio query statements attached to the single testimonial.
 
 ## [[1.3.2]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.2) - 2022-09-12
 
