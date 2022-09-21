@@ -26,6 +26,8 @@
 	if ( ! empty( $tab_project['posts'][0] ) ) {
 		if ( ! is_array( $tab_project['posts'][0] ) ) {
 			$post_ids = array( $tab_project['posts'][0] );
+		} else {
+			$post_ids = $tab_project['posts'][0];
 		}
 		// $tab_project['shortcode'] = '[lsx_projects columns="3" include="' . $post_ids . '"]';
 
@@ -68,6 +70,8 @@
 	if ( ! empty( $tab_service['posts'][0] ) ) {
 		if ( ! is_array( $tab_service['posts'][0] ) ) {
 			$post_ids = array( $tab_service['posts'][0] );
+		} else {
+			$post_ids = $tab_service['posts'][0];
 		}
 		// $tab_service['shortcode'] = '[lsx_services columns="3" include="' . $post_ids . '"]';
 
