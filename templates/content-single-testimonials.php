@@ -75,7 +75,7 @@
 
 		$args = array(
 			'post_type'              => 'page',
-			'post__in'               => $tab_service['posts'][0],
+			'post__in'               => $post_ids,
 			'orderby'                => 'post__in',
 			'no_found_rows'          => true,
 			'ignore_sticky_posts'    => 1,
