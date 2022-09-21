@@ -24,7 +24,6 @@
 	$tab_project['posts'] = get_post_meta( get_the_ID(), 'project_to_testimonial', false );
 
 	if ( ! empty( $tab_project['posts'][0] ) ) {
-		$post_ids = join( ',', $tab_project['posts'][0] );
 		// $tab_project['shortcode'] = '[lsx_projects columns="3" include="' . $post_ids . '"]';
 
 		$tab_project['posts_html'] = '';
