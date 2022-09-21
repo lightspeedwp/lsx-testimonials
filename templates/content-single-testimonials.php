@@ -66,7 +66,9 @@
 	$tab_service['posts'] = get_post_meta( get_the_ID(), 'service_to_testimonial', false );
 
 	if ( ! empty( $tab_service['posts'][0] ) ) {
-		$post_ids = join( ',', $tab_service['posts'][0] );
+		if ( ! is_array( $tab_service['posts'][0] ) ) {
+			$post_ids = array( $tab_service['posts'][0] );
+		}
 		// $tab_service['shortcode'] = '[lsx_services columns="3" include="' . $post_ids . '"]';
 
 		$tab_service['posts_html'] = '';
