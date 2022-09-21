@@ -1,14 +1,18 @@
 # Change log
 
-## [[1.3.2]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.2) - 2022-09-21
+## [[1.3.3]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.3) - 2022-09-21
 
 ### Fixed
 - A php fatal error on the single content template.
 
-### Security
+## [[1.3.2]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.2) - 2022-09-12
+
+### Fixed
+- Compatability error with ACF relationship fields.
+- CSS class mismatch causing the slider to fail initialization
 - General testing to ensure compatibility with latest WordPress version (6.0).
 
-## [[1.3.1]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.1) - 2020-01-15
+## [[1.3.1]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.1) - 2021-01-15
 
 ### Fixed
 - Updated the single H5 to H1 for SEO and semantic.
@@ -20,7 +24,7 @@
 ### Security
 - General testing to ensure compatibility with latest WordPress version (5.6).
 
-## [[1.3.0]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.0) - 2020-10-04
+## [[1.3.0]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.0) - 2020-11-04
 
 ### Added
 
@@ -38,7 +42,7 @@
 - General testing to ensure compatibility with latest WordPress version (5.5).
 - General testing to ensure compatibility with latest LSX Theme version (2.9).
 
-## [[1.2.3]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.2.3) - 2020-03-30
+## [[1.2.3]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.2.3) - 2020-03-20
 
 ### Added
 

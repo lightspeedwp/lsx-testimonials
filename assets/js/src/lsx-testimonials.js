@@ -1,7 +1,7 @@
 (function($) {
 	$(document).ready(function() {
 		var $testimonialSlider = $(
-			"#lsx-testimonials-slider.lsx-testimonial-block"
+			"#lsx-testimonials-slider"
 		);
 
 		$testimonialSlider.on("init", function(event, slick) {
