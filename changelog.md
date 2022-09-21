@@ -1,5 +1,13 @@
 # Change log
 
+## [[1.3.2]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.2) - 2022-09-21
+
+### Fixed
+- A php fatal error on the single content template.
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (6.0).
+
 ## [[1.3.1]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.1) - 2020-01-15
 
 ### Fixed
