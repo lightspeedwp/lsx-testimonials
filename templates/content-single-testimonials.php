@@ -24,13 +24,16 @@
 	$tab_project['posts'] = get_post_meta( get_the_ID(), 'project_to_testimonial', false );
 
 	if ( ! empty( $tab_project['posts'][0] ) ) {
+		if ( ! is_array( $tab_project['posts'][0] ) ) {
+			$post_ids = array( $tab_project['posts'][0] );
+		}
 		// $tab_project['shortcode'] = '[lsx_projects columns="3" include="' . $post_ids . '"]';
 
 		$tab_project['posts_html'] = '';
 
 		$args = array(
 			'post_type'              => 'project',
-			'post__in'               => $tab_project['posts'][0],
+			'post__in'               => $post_ids,
 			'orderby'                => 'post__in',
 			'no_found_rows'          => true,
 			'ignore_sticky_posts'    => 1,
