@@ -225,7 +225,7 @@ class LSX_Testimonials_SCPO_Engine {
 	function lsx_testimonials_scporder_pre_get_posts( $wp_query ) {
 		$objects = $this->get_lsx_testimonials_scporder_options_objects();
 
-		if ( empty( $objects ) ) {
+		if ( empty( $objects ) || ! isset( $wp_query->query['post_type'] ) ) {
 			return false;
 		}
 
