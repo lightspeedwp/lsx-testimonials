@@ -5,7 +5,7 @@ Tags: lsx, gutenberg, testimonials, post type, carousel
 Requires at least: 5.0
 Requires PHP: 7.0
 Tested up to: 6.3
-Stable tag: 1.3.5
+Stable tag: 1.3.6
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 

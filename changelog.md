@@ -1,14 +1,19 @@
 # Change log
 
-## [[1.3.5]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.5) - 2023-08-18
+## [[1.3.6]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.6) - 2023-08-17
 
 ### Security
 - General testing to ensure compatibility with latest WordPress version (6.3).
 
-## [[1.3.4]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.4) - 2023-04-20
+## [[1.3.5]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.5) - 2023-04-20
 
 ### Security
 - General testing to ensure compatibility with latest WordPress version (6.2).
+
+## [[1.3.4]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.4) - 2022-12-23
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (6.1.1).
 
 ## [[1.3.3]](https://github.com/lightspeeddevelopment/lsx-testimonials/releases/tag/1.3.3) - 2022-09-21
 
